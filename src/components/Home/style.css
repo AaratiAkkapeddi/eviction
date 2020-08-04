@@ -1,0 +1,15 @@
+.listing{
+	display: block;
+}
+
+.listings, .happening-now{
+	display: inline-block;
+	width:40%;
+	padding:25px;
+}
+.happening-now{
+	border:1px solid #0e0e0e;
+	float:right;
+	margin:25px;
+	text-align: right;
+}

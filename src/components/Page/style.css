@@ -1,0 +1,22 @@
+.pass-protected .image, .pass-protected .info{
+	display: none;
+}
+
+.pass-protected.unlocked .image, .pass-protected.unlocked .info{
+	display: inline-block;
+}
+
+.image, .info{
+	display: inline-block;
+	width: 50%;
+	margin:25px;
+	padding: 25px;
+}
+.image{
+	float:right;
+	width: 30%;
+}
+.image img{
+	max-width: 100%;
+	height: auto;
+}
