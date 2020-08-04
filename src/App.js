@@ -19,7 +19,7 @@ class App extends React.Component {
         err : null,
         isLoaded : false,
         records: [],
-        info:[]
+        info:[] 
     };
   }
   componentDidMount() {
