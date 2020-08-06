@@ -39,7 +39,12 @@ class Performer extends Component {
               </div>
               <div className='image'>
                 {records[i].fields.Image ? 
-                  <img src={records[i].fields.Image[0].url}/>
+                  records[i].fields.Image.map((j,i)=>{
+                    return(
+                    <img src={j.url}/>
+                    )
+                  })
+                  
                 : "" }
               </div>
               

@@ -43,8 +43,14 @@ class Page extends Component {
               <ReactMarkdown source={records[i].fields.Info} />
               </div>
               <div class='image'>
-                {records[i].fields.Image.length > 0 ? 
-                  <img src={records[i].fields.Image[0].url}/>
+
+                {records[i].fields.Image ? 
+                  records[i].fields.Image.map((j,i)=>{
+                    return(
+                    <img src={j.url}/>
+                    )
+                  })
+                  
                 : "" }
               </div>
               
