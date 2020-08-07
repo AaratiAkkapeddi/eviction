@@ -47,7 +47,7 @@ class Home extends Component {
 			notHappeningNow.push(x)
 		}
 	})
-	const listings = records.length > 0 ? records.map((x,i)=>{
+	const listings = notHappeningNow.length > 0 ? notHappeningNow.map((x,i)=>{
 		return(
 			<a key={x.id} className="listing" href={x.fields.LinkUrl}>{x.fields.LinkText}</a>
 		)
