@@ -41,7 +41,7 @@ class Home extends Component {
 	          	notHappeningNow.push(x)
 	          }
 	        } else{
-	        	notHappeningNow.push(x)
+	        	// notHappeningNow.push(x)
 	        }
 		} else {
 			notHappeningNow.push(x)
