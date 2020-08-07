@@ -24,6 +24,12 @@ class About extends Component {
 	      })
 	      .catch(error => console.log(error))
 	  }
+      componentDidUpdate(){
+    var links = document.links;
+    for (var i = 0; i < links.length; i++) {
+         links[i].target = "_blank";
+    }
+  }
 
    render() {
    	const {about} = this.state;

@@ -1,6 +1,16 @@
+
+@font-face {
+  font-family: "Redaction";
+  src: url("./fonts/Redaction_50-Bold.woff2") format("woff2")
+	
+}
+
 body{
-  background: whitesmoke;
-  color: #0e0e0e;
+	letter-spacing: 0.05rem;
+	font-family: "Redaction";
+  background: #0e0e0e;
+  color: whitesmoke;
+  font-size:18px;
   border-color: #0e0e0e;
 }
 a, a:hover, a:focus, a:active{

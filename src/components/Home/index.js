@@ -18,6 +18,12 @@ class Home extends Component {
 
    }
 
+  componentDidUpdate(){
+    var links = document.links;
+    for (var i = 0; i < links.length; i++) {
+         links[i].target = "_blank";
+    }
+  }
    render() {
    	const {records} = this.props;
    	const happeningNow = [];
@@ -47,6 +53,8 @@ class Home extends Component {
 			notHappeningNow.push(x)
 		}
 	})
+
+
 	const listings = notHappeningNow.length > 0 ? notHappeningNow.map((x,i)=>{
 		return(
 			<a key={x.id} className="listing" href={x.fields.LinkUrl}>{x.fields.LinkText}</a>
@@ -74,7 +82,7 @@ class Home extends Component {
        </div>
        { happenings.length > 0 ? 
        <div className='happening-now'>
-         HAPPENING NOW
+         <h1>HAPPENING NOW</h1>
          {happenings}
        </div>
        :""

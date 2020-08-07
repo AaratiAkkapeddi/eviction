@@ -9,4 +9,5 @@ nav{
 nav a {
 	display: inline-block;
 	margin-right:15px;
+	text-decoration: none;
 }
