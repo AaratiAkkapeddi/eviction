@@ -38,7 +38,7 @@ class About extends Component {
 
     <header className="App-header Homepage">
        { about.length > 0 ? 
-       <div className='about'>
+       <div className='about section'>
          <ReactMarkdown source={about[0].fields.About} />
        </div>
        :""

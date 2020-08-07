@@ -9,8 +9,8 @@
 .image, .info{
 	display: inline-block;
 	width: 50%;
-	margin:25px;
-	padding: 25px;
+	margin:0 50px;
+	padding: 0px;
 }
 .image{
 	float:right;
@@ -19,4 +19,14 @@
 .image img{
 	max-width: 100%;
 	height: auto;
+}
+
+@media(max-width: 768px){
+	.image, .info{
+		display: block;
+		width: calc(100% - 30px);
+		margin:0 15px;
+		padding: 0px;
+	}
+	
 }

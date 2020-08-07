@@ -65,6 +65,7 @@ class Page extends Component {
         mew = (
           <div>
               <div class='info'>
+              <h1>{records[i].fields.Title}</h1>
               <ReactMarkdown source={records[i].fields.Info} />
               </div>
               <div class='image'>

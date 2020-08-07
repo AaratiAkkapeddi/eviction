@@ -40,6 +40,7 @@ class Home extends Component {
 	            var d3 = new Date(x.fields.EndTime);
 	            if(d3 > d1){
 	              happeningNow.push(x)
+	              notHappeningNow.push(x)
 	            } else {
 	            	// notHappeningNow.push(x)
 	            }
@@ -66,9 +67,12 @@ class Home extends Component {
 		return(
 			<a key={x.id} className="listing" href={x.fields.LinkUrl}>
 			{ x.fields.Image ? 
+				<div>
 			<img src={x.fields.Image[0].url}/> 
-			:""}
 			<br/>
+			</div>
+			:""}
+			
 			{x.fields.LinkText}</a>
 		)
 		
@@ -77,16 +81,17 @@ class Home extends Component {
     return (
 
     <header className="App-header Homepage">
-       <div className='listings'>
-         {listings}
-       </div>
-       { happenings.length > 0 ? 
+    { happenings.length > 0 ? 
        <div className='happening-now'>
          <h1>HAPPENING NOW</h1>
          {happenings}
        </div>
        :""
    		}
+       <div className='listings'>
+         {listings}
+       </div>
+       
     </header>
 
 

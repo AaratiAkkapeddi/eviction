@@ -37,10 +37,11 @@ class Performer extends Component {
 
       if(records[i].fields.slug == this.props.match.params.id){
         mew = (
-          <div>
-              <h1 className='title'>{records[i].fields.Name}</h1>
+          <div className='section'>
+              
               <div className='info'>
-                <ReactMarkdown source={records[i].fields.About} />
+                <h1>{records[i].fields.Name}</h1>
+                <ReactMarkdown className='brown-pro' source={records[i].fields.About} />
               </div>
               <div className='image'>
                 {records[i].fields.Image ? 
