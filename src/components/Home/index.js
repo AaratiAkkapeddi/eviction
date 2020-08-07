@@ -35,7 +35,7 @@ class Home extends Component {
 	            if(d3 > d1){
 	              happeningNow.push(x)
 	            } else {
-	            	notHappeningNow.push(x)
+	            	// notHappeningNow.push(x)
 	            }
 	          } else {
 	          	notHappeningNow.push(x)
