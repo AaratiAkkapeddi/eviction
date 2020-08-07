@@ -21,7 +21,9 @@ class Home extends Component {
   componentDidUpdate(){
     var links = document.links;
     for (var i = 0; i < links.length; i++) {
+     if(!links[i].download){
          links[i].target = "_blank";
+     }
     }
   }
    render() {
@@ -57,8 +59,9 @@ class Home extends Component {
 
 
 	const listings = notHappeningNow.length > 0 ? notHappeningNow.map((x,i)=>{
+
 		return(
-			<a key={x.id} className="listing" href={x.fields.LinkUrl}>{x.fields.LinkText}</a>
+			<a key={x.id} className="listing" href={x.fields.DownloadFile ?  x.fields.DownloadFile[0].url : x.fields.LinkUrl} download={x.fields.DownloadFile ?  true : false}>{x.fields.LinkText}</a>
 		)
 		
 	}) : 'loading'
