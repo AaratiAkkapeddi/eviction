@@ -16,10 +16,19 @@ class Home extends Component {
     this.state = {
       carousel_slides: [],
       cherry: false,
+      about:[]
     };
 this.popCherry = this.popCherry.bind(this)
    }
   componentDidMount(){
+  	fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/introduction?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
+	      .then(res => res.json())
+	      .then(res => {
+	        this.setState({ about: res.records })
+	      })
+	      .catch(error => console.log(error))
+
+
   	console.log(localStorage.getItem('seen'))
   	if (localStorage.getItem('seen') == 'true') {
   		this.setState({cherry: true})
@@ -50,7 +59,7 @@ this.popCherry = this.popCherry.bind(this)
 }
    render() {
    	const {records} = this.props;
-   	const {cherry} = this.state;
+   	const {cherry, about} = this.state;
 
    	const happeningNow = [];
    	const notHappeningNow = [];
@@ -118,12 +127,13 @@ this.popCherry = this.popCherry.bind(this)
     {!cherry ? 
     <div id='pop-up'>
     <div className='inner'>
-	    	Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
+	    	{about[0] ? 
 
-	Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+   				<ReactMarkdown source={about[0].fields.PopupText} />
+	    		: "" }
+	</div>
 
-	Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
-	    </div><button onClick={this.popCherry}>Enter</button></div>
+	<button onClick={this.popCherry}>Enter</button></div>
 	: ""}
     { happenings.length > 0 ? 
        <div className='happening-now'>
