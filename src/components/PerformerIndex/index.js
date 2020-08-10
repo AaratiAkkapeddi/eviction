@@ -33,8 +33,25 @@ class PerformerIndex extends Component {
     const {records} = this.state;
 
   const listings = records.length > 0 ? records.map((x,i)=>{
+    if(x.fields.Image){
+      var styles = {
+        "backgroundImage": "url("+ x.fields.Image[0].url+")"
+      }
+  } else {
+    var styles = {}
+  }
     return(
-      <a key={x.id} className="listing" href={"/performer/"+ x.fields.slug}>{x.fields.Name}</a>
+      <a key={x.id} className="performer-listing" href={"/performer/"+ x.fields.slug}>
+          {x.fields.Image ? 
+
+
+                    <div style={styles} className='performer-card'></div>
+
+
+                  
+                : "" }
+      <span>{x.fields.Name}</span>
+      </a>
     )
     
   }) : 'loading'
@@ -44,7 +61,7 @@ class PerformerIndex extends Component {
     return (
 
     <header className="App-header Homepage">
-       <div className='listings'>
+       <div className='performer-listings'>
          {listings}
        </div>
     </header>

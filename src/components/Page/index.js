@@ -11,8 +11,10 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      records:[]
+      records:[],
+      pass: false
     };
+    this.enterPass = this.enterPass.bind(this);
    }
 
   componentDidMount() {
@@ -25,9 +27,10 @@ class Page extends Component {
   }
   componentDidUpdate(){
 var linkList = document.getElementsByClassName('info')[0];
-    var otherlinks = linkList.getElementsByTagName('a')
 
-    if(otherlinks){
+
+    if(linkList){
+       var otherlinks = linkList.getElementsByTagName('a')
     for (var i = 0; i < otherlinks.length; i++) {
 
          otherlinks[i].target = "_blank";
@@ -35,21 +38,41 @@ var linkList = document.getElementsByClassName('info')[0];
     }
   }
   }
-  findRecord(records){
+
+  enterPass(event, correct){
+
+    if(event.target.value == correct){
+
+      console.log('woo')
+      this.setState({pass: true})
+    }
+  }
+
+  findRecord(records, pass){
 
       var mew = ' ';
+
       for (var i = records.length - 1; i >= 0; i--) {
-        console.log(records[i].fields.slug)
-        console.log(this.props.match.params.id)
+
 
         if(records[i].fields.slug == this.props.match.params.id){
+          var password = records[i].fields.Password
           document.getElementsByTagName('body')[0].style.backgroundColor = records[i].fields.PageBackgroundColor
 
          if(records[i].fields.IsPasswordProtected){
             mew = (
-        
+     
             <div className='pass-protected'>
-              <input className='pass'/>
+               {!pass ? 
+                <div className='form'>
+              <h1>Enter Password</h1>
+              <input className='pass' onChange={(e) => {
+                     this.enterPass(e, password)
+                }}/>
+                </div>
+                :"" }
+            {pass ? 
+              <div>
               <div className='info'>
               <ReactMarkdown source={records[i].fields.Info} />
               </div>
@@ -64,7 +87,8 @@ var linkList = document.getElementsByClassName('info')[0];
                   
                 : "" }
               </div>
-              
+              </div>
+              : "" }
             </div>
           )
          }else{
@@ -95,8 +119,8 @@ var linkList = document.getElementsByClassName('info')[0];
    render() {
 
 
-    const {records} = this.state
-    const mycontent = this.findRecord(records)
+    const {records, pass} = this.state
+    const mycontent = this.findRecord(records, pass)
     return (
 
      <header className="App-header happening">

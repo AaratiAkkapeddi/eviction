@@ -1,0 +1,38 @@
+.performer-listing{
+	display: inline-block;
+	width:33%;
+	border: 1px solid whitesmoke;
+	padding:10px;
+	width:200px;
+	vertical-align: top;
+/*height: 200px;*/
+}
+.performer-listing span{
+	margin-top:15px;
+}
+.performer-listing .performer-card{
+	width:100%;
+	height: 200px;
+	margin-bottom:15px;
+	background-size:cover;
+	background-position:center;
+}
+
+.performer-listings{
+	display: block;
+	margin: 0 50px;
+	margin-top:70px;
+}
+
+@media(max-width: 768px){
+	.performer-listings{
+		margin:0 15px;
+		margin-top:60px;
+	}
+	.performer-listing{
+		width:140px;
+	}
+	.performer-listing .performer-card{
+		height: 140px;
+	}
+}
