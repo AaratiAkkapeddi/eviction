@@ -19,8 +19,9 @@ class App extends React.Component {
         err : null,
         isLoaded : false,
         records: [],
-        info:[] 
+        info:[],
     };
+    
   }
   componentDidMount() {
       fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/listings?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
@@ -35,7 +36,7 @@ class App extends React.Component {
 
 
 render() {
-  const { records,info } = this.state;
+  const { records,info, cherry } = this.state;
 
   return (
     <Router>

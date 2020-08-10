@@ -5,6 +5,24 @@
 .listings{
 	margin:0 50px;
 }
+#pop-up{
+	width:calc(100vw - 100px);
+	height:100vh;
+	top:0;
+	left:0;
+	position: fixed; 
+	background: rgba(0,0,0,0.9);
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding:0 50px;
+}
+#pop-up .inner{
+	max-width: 900px;
+	display: block;
+	margin:0 auto;
+}
 
 .listings, .happening-now{
 	display: inline-block;
@@ -85,5 +103,10 @@
 	a.happening-listing{
 		display: inline-block;
 		width: 30%;
+	}
+
+	#pop-up{
+		width:calc(100vw - 40px);
+		padding:20px;
 	}
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './style.css';
 import {
   BrowserRouter as Router,
@@ -14,10 +15,17 @@ class Home extends Component {
     super(props);
     this.state = {
       carousel_slides: [],
+      cherry: false,
     };
-
+this.popCherry = this.popCherry.bind(this)
    }
-
+  componentDidMount(){
+  	console.log(localStorage.getItem('seen'))
+  	if (localStorage.getItem('seen') == 'true') {
+  		this.setState({cherry: true})
+      localStorage.setItem('seen', JSON.stringify(true))
+    }
+  }
   componentDidUpdate(){
     var links = document.getElementsByClassName('external-link');
     var otherlinks = document.body.querySelector('.link-list a');
@@ -34,8 +42,16 @@ class Home extends Component {
     }
 	}
   }
+
+  popCherry(){
+  this.setState({cherry: true})
+  localStorage.setItem('seen', JSON.stringify(true))
+
+}
    render() {
    	const {records} = this.props;
+   	const {cherry} = this.state;
+
    	const happeningNow = [];
    	const notHappeningNow = [];
 
@@ -95,9 +111,20 @@ class Home extends Component {
 		
 	}) : []
 
+
     return (
 
     <header className="App-header Homepage">
+    {!cherry ? 
+    <div id='pop-up'>
+    <div className='inner'>
+	    	Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
+
+	Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+	Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
+	    </div><button onClick={this.popCherry}>Enter</button></div>
+	: ""}
     { happenings.length > 0 ? 
        <div className='happening-now'>
          <div className='marquee'>
@@ -110,7 +137,9 @@ class Home extends Component {
        :""
    		}
        <div className='listings'>
+
          {listings}
+       
        </div>
        
     </header>
