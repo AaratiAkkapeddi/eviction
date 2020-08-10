@@ -25,7 +25,12 @@ body{
 a, a:hover, a:focus, a:active{
   color: inherit;
 }
-
+a.listing:visited{
+  color: #551A8B;
+}
+a.link, a.link:hover, a.link:focus, a.link:active{
+  color: whitesmoke;
+}
 header{
 	margin-top:50px;
 }
