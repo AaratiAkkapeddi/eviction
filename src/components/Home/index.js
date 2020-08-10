@@ -68,7 +68,7 @@ class Home extends Component {
 
 	const happenings = happeningNow.length > 0 ? happeningNow.map((x,i)=>{
 		return(
-			<a key={x.id} className="listing" href={x.fields.LinkUrl}>
+			<a key={x.id} className="happening-listing" href={x.fields.LinkUrl}>
 			{ x.fields.Image ? 
 				<div>
 			<img src={x.fields.Image[0].url}/> 
@@ -86,7 +86,11 @@ class Home extends Component {
     <header className="App-header Homepage">
     { happenings.length > 0 ? 
        <div className='happening-now'>
-         <h1>HAPPENING NOW</h1>
+         <div className='marquee'>
+         <div>
+			<h1>HAPPENING NOW</h1>
+			<h1>HAPPENING NOW</h1>
+         </div></div>
          {happenings}
        </div>
        :""
