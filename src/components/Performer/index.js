@@ -24,12 +24,18 @@ class Performer extends Component {
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
-    var links = document.links;
-    for (var i = 0; i < links.length; i++) {
-            if(!links[i].download){
-         links[i].target = "_blank";
-     }
+
+    var linkList = document.getElementsByClassName('link-list')[0];
+    var otherlinks = linkList.getElementsByTagName('a')
+
+    if(otherlinks){
+    for (var i = 0; i < otherlinks.length; i++) {
+
+         otherlinks[i].target = "_blank";
+     
     }
+  }
+
   }
   findRecord(records){
 

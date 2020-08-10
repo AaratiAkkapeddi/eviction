@@ -8,17 +8,21 @@
 
 .listings, .happening-now{
 	display: inline-block;
-	width:calc(75% - 100px);
+	width: calc(60% - 100px);
 	padding:25px 0;
 }
 .happening-now{
 	border:1px solid #0e0e0e;
 	float:right;
 	padding-top:0;
-	width: calc(25% - 100px);
+	width: calc(40% - 100px);
 	margin: 25px 50px;
 	text-align: right;
 	margin-left:0;
+}
+.happening-listing {
+    display: inline-block;
+    width: 50%;
 }
 .happening-now img{
 	max-width: 100%;

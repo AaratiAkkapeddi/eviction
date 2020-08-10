@@ -24,12 +24,16 @@ class Page extends Component {
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
-    var links = document.links;
-    for (var i = 0; i < links.length; i++) {
-           if(!links[i].download){
-         links[i].target = "_blank";
-     }
+var linkList = document.getElementsByClassName('info')[0];
+    var otherlinks = linkList.getElementsByTagName('a')
+
+    if(otherlinks){
+    for (var i = 0; i < otherlinks.length; i++) {
+
+         otherlinks[i].target = "_blank";
+     
     }
+  }
   }
   findRecord(records){
 
@@ -46,10 +50,10 @@ class Page extends Component {
         
             <div className='pass-protected'>
               <input className='pass'/>
-              <div class='info'>
+              <div className='info'>
               <ReactMarkdown source={records[i].fields.Info} />
               </div>
-              <div class='image'>
+              <div className='image'>
 
                 {records[i].fields.Image ? 
                   records[i].fields.Image.map((j,i)=>{
@@ -66,11 +70,11 @@ class Page extends Component {
          }else{
         mew = (
           <div>
-              <div class='info'>
+              <div className='info'>
               <h1>{records[i].fields.Title}</h1>
               <ReactMarkdown source={records[i].fields.Info} />
               </div>
-              <div class='image'>
+              <div className='image'>
                 {records[i].fields.Image ? 
                   <img src={records[i].fields.Image[0].url}/>
                 : "" }

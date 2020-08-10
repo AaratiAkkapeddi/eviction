@@ -27,12 +27,7 @@ class PerformerIndex extends Component {
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
-    var links = document.links;
-    for (var i = 0; i < links.length; i++) {
-            if(!links[i].download){
-         links[i].target = "_blank";
-     }
-    }
+
   }
    render() {
     const {records} = this.state;

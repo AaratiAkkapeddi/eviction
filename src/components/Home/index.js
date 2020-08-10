@@ -19,12 +19,20 @@ class Home extends Component {
    }
 
   componentDidUpdate(){
-    var links = document.links;
+    var links = document.getElementsByClassName('external-link');
+    var otherlinks = document.body.querySelector('.link-list a');
     for (var i = 0; i < links.length; i++) {
-     if(!links[i].download){
+
          links[i].target = "_blank";
-     }
+     
     }
+    if(otherlinks){
+    for (var i = 0; i < otherlinks.length; i++) {
+
+         otherlinks[i].target = "_blank";
+     
+    }
+	}
   }
    render() {
    	const {records} = this.props;
@@ -33,6 +41,7 @@ class Home extends Component {
 
    	/* find out if happening now */
    	records.map((x,i)=>{
+   		if(x.fields.LinkUrl){
 		if(x.fields.StartTime){
 			var d1 = new Date();
 	        var d2 = new Date(x.fields.StartTime);
@@ -55,20 +64,24 @@ class Home extends Component {
 		} else {
 			notHappeningNow.push(x)
 		}
+	}
 	})
 
 
 	const listings = notHappeningNow.length > 0 ? notHappeningNow.map((x,i)=>{
 
 		return(
-			<a key={x.id} className="listing" href={x.fields.DownloadFile ?  x.fields.DownloadFile[0].url : x.fields.LinkUrl} download={x.fields.DownloadFile ?  true : false}>{x.fields.LinkText}</a>
+			<a key={x.id} className={x.fields.LinkUrl.includes('http') ? "listing external-link":"listing"} href={x.fields.DownloadFile ?  x.fields.DownloadFile[0].url : x.fields.LinkUrl} download={x.fields.DownloadFile ?  true : false}>{x.fields.LinkText}</a>
 		)
 		
 	}) : 'loading'
 
 	const happenings = happeningNow.length > 0 ? happeningNow.map((x,i)=>{
+
+
 		return(
-			<a key={x.id} className="happening-listing" href={x.fields.LinkUrl}>
+
+			<a key={x.id} className={x.fields.LinkUrl.includes('http') ? "happening-listing external-link":"happening-listing"} href={x.fields.LinkUrl}>
 			{ x.fields.Image ? 
 				<div>
 			<img src={x.fields.Image[0].url}/> 
@@ -78,6 +91,7 @@ class Home extends Component {
 			
 			</a>
 		)
+	
 		
 	}) : []
 
@@ -88,8 +102,8 @@ class Home extends Component {
        <div className='happening-now'>
          <div className='marquee'>
          <div>
-			<h1>HAPPENING NOW</h1>
-			<h1>HAPPENING NOW</h1>
+			<h1>HAPPENING NOW HAPPENING NOW</h1>
+			<h1>HAPPENING NOW HAPPENING NOW</h1>
          </div></div>
          {happenings}
        </div>
