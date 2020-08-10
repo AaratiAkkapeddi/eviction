@@ -8,13 +8,14 @@
 
 .listings, .happening-now{
 	display: inline-block;
-	width:40%;
+	width:60%;
 	padding:25px 0;
 }
 .happening-now{
 	border:1px solid #0e0e0e;
 	float:right;
 	padding-top:0;
+	width: calc(40% - 100px);
 	margin: 25px 50px;
 	text-align: right;
 }

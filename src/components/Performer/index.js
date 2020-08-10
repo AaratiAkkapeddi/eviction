@@ -44,7 +44,7 @@ class Performer extends Component {
               <div className='info'>
                 <h1>{records[i].fields.Name}</h1>
                 <ReactMarkdown className='brown-pro' source={records[i].fields.About} />
-                <ReactMarkdown className='brown-pro' source={records[i].fields.LinkList} />
+                <ReactMarkdown className='brown-pro link-list' source={records[i].fields.LinkList} />
               </div>
               <div className='image'>
                 {records[i].fields.Image ? 
