@@ -72,11 +72,11 @@ class Home extends Component {
 			{ x.fields.Image ? 
 				<div>
 			<img src={x.fields.Image[0].url}/> 
-			<br/>
+
 			</div>
 			:""}
 			
-			{x.fields.LinkText}</a>
+			</a>
 		)
 		
 	}) : []
