@@ -26,9 +26,10 @@ class About extends Component {
 	  }
       componentDidUpdate(){
 var linkList = document.getElementsByClassName('about')[0];
-    var otherlinks = linkList.getElementsByTagName('a')
+    
 
-    if(otherlinks){
+    if(linkList){
+      var otherlinks = linkList.getElementsByTagName('a')
     for (var i = 0; i < otherlinks.length; i++) {
 
          otherlinks[i].target = "_blank";
