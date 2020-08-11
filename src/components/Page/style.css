@@ -31,9 +31,14 @@
 	padding: 0px;
 }
 .image{
-	float:right;
-	width: calc(50% - 50px);
-	margin-left:0px;
+	float: right;
+    width: calc(50% - 100px);
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-top: -50px;
+    margin-left: 0;
+    border-left: 1px solid white;
+
 }
 .image img{
 	max-width: 100%;
@@ -48,6 +53,16 @@
 		width: calc(100% - 30px);
 		margin:0 15px;
 		padding: 0px;
+	}
+	.image{
+		float: right;
+	    padding-left: 30px;
+	    padding-top: 0px;
+	    padding-bottom:30px;
+	    margin-top: 0;
+	    margin-left: 0;
+	    border-left: none;
+
 	}
 	
 }

@@ -62,14 +62,7 @@ class Performer extends Component {
       if(records[i].fields.slug == this.props.match.params.id){
         mew = (
           <div className='section'>
-              
-              <div className='info'>
-                <h1>{records[i].fields.Name}</h1>
-                <ReactMarkdown className='brown-pro' source={records[i].fields.About} />
-                <ReactMarkdown className='brown-pro link-list' source={records[i].fields.LinkList} />
-                <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
-              </div>
-              <div className='image'>
+               <div className='image'>
                 {records[i].fields.Image ? 
                   records[i].fields.Image.map((j,i)=>{
                     return(
@@ -79,6 +72,13 @@ class Performer extends Component {
                   
                 : "" }
               </div>
+              <div className='info'>
+                <h1>{records[i].fields.Name}</h1>
+                <ReactMarkdown className='brown-pro' source={records[i].fields.About} />
+                <ReactMarkdown className='brown-pro link-list' source={records[i].fields.LinkList} />
+                <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
+              </div>
+             
               
             </div>
             

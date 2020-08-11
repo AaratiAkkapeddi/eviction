@@ -87,11 +87,7 @@ var linkList = document.getElementsByClassName('info')[0];
                 :"" }
             {pass ? 
               <div>
-              <div className='info brown-pro'>
-              <ReactMarkdown source={records[i].fields.Info} />
-              <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
-              </div>
-              <div className='image'>
+                  <div className='image'>
 
                 {records[i].fields.Image ? 
                   records[i].fields.Image.map((j,i)=>{
@@ -102,6 +98,11 @@ var linkList = document.getElementsByClassName('info')[0];
                   
                 : "" }
               </div>
+              <div className='info brown-pro'>
+              <ReactMarkdown source={records[i].fields.Info} />
+              <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
+              </div>
+          
               </div>
               : "" }
             </div>
@@ -109,16 +110,18 @@ var linkList = document.getElementsByClassName('info')[0];
          }else{
         mew = (
           <div>
+
+            <div className='image'>
+                {records[i].fields.Image ? 
+                  <img src={records[i].fields.Image[0].url}/>
+                : "" }
+              </div>
               <div className='info brown-pro'>
               <h1>{records[i].fields.Title}</h1>
               <ReactMarkdown source={records[i].fields.Info} />
               <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
               </div>
-              <div className='image'>
-                {records[i].fields.Image ? 
-                  <img src={records[i].fields.Image[0].url}/>
-                : "" }
-              </div>
+            
               
             </div>
             

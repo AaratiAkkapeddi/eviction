@@ -26,10 +26,10 @@
 }
 .marquee{
 	position: fixed;
-	top:5px;
+	top:0px;
 	right:0;
 	width:30%;
-
+	padding-top:15px;
 	background: #0e0e0e;
 }
 .listings, .happening-now{
