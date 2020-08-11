@@ -123,7 +123,7 @@ this.popCherry = this.popCherry.bind(this)
 
     return (
 
-    <header className="App-header Homepage">
+    <header className="App-header Homepage brown-pro">
     {!cherry ? 
     <div id='pop-up'>
     <div className='inner'>
@@ -139,8 +139,8 @@ this.popCherry = this.popCherry.bind(this)
        <div className='happening-now'>
          <div className='marquee'>
          <div>
-			<h1>HAPPENING NOW HAPPENING NOW</h1>
-			<h1>HAPPENING NOW HAPPENING NOW</h1>
+			<h1>HAPPENING NOW</h1>
+			<h1>HAPPENING NOW</h1>
          </div></div>
          {happenings}
        </div>

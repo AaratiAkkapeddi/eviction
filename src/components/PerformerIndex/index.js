@@ -63,7 +63,9 @@ class PerformerIndex extends Component {
     <header className="App-header Homepage">
        <div className='performer-listings'>
          {listings}
+         <br/><a id='extra-back-button-for-no-reason' href='/'>back home</a>
        </div>
+
     </header>
 
 
