@@ -29,6 +29,7 @@
 	width: calc(60% - 100px);
 	padding:25px 0;
 }
+
 .happening-now{
 	border:1px solid #0e0e0e;
 	float:right;
@@ -44,6 +45,25 @@
 }
 .happening-now img{
 	max-width: 100%;
+}
+#over-modal{
+	position: fixed;
+	z-index: 9999999;
+	top:0;
+	left:0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: #0e0e0e;
+	width:100vw;
+	height:100vh;
+}
+#over-modal > div{
+	max-width: 800px;
+	display: block;
+
+	margin-top:-50px;
+	margin:0 auto;
 }
 .happening-now h1{
 	font-size:30px;
@@ -102,6 +122,14 @@ font-family:'TelegramaRaw';
 	.listing{
 		margin:0;
 	}
+	#over-modal > div{
+	max-width: 800px;
+	padding:25px;
+	display: block;
+
+	margin-top:-50px;
+	margin:0 auto;
+}
 	.listings{
 		margin:0 15px;
 	}

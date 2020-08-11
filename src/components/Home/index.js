@@ -16,11 +16,26 @@ class Home extends Component {
     this.state = {
       carousel_slides: [],
       cherry: false,
-      about:[]
+      about:[],
+      dansucks: false,
     };
 this.popCherry = this.popCherry.bind(this)
    }
   componentDidMount(){
+
+    let unix_timestamp = 1597204800
+    // Create a new JavaScript Date object based on the timestamp
+    // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+    var date = new Date(unix_timestamp * 1000);
+    var today = new Date();   
+   if(today >= date){
+
+    this.setState({dansucks: true})
+   }else{
+    this.setState({dansucks: false})
+   }
+
+
   	fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/introduction?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
 	      .then(res => res.json())
 	      .then(res => {
@@ -36,6 +51,9 @@ this.popCherry = this.popCherry.bind(this)
     }
   }
   componentDidUpdate(){
+
+
+
     var links = document.getElementsByClassName('external-link');
     var otherlinks = document.body.querySelector('.link-list a');
     for (var i = 0; i < links.length; i++) {
@@ -59,7 +77,7 @@ this.popCherry = this.popCherry.bind(this)
 }
    render() {
    	const {records} = this.props;
-   	const {cherry, about} = this.state;
+   	const {cherry, about, dansucks} = this.state;
 
    	const happeningNow = [];
    	const notHappeningNow = [];
@@ -124,6 +142,17 @@ this.popCherry = this.popCherry.bind(this)
     return (
 
     <header className="App-header Homepage brown-pro">
+    {dansucks ?
+      <div id='over-modal'>
+      {about[0] ? 
+        <div>
+        
+        <ReactMarkdown source={about[0].fields.OverText}  />
+        </div>
+        :""}
+      </div>
+      :""}
+
     {!cherry ? 
     <div id='pop-up'>
     <div className='inner'>

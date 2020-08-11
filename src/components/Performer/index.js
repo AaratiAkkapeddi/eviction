@@ -16,6 +16,21 @@ class Performer extends Component {
    }
 
   componentDidMount() {
+
+    var meow = setInterval(function(){ 
+        let unix_timestamp = 1597204800
+        // Create a new JavaScript Date object based on the timestamp
+        // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+        var date = new Date(unix_timestamp * 1000);
+        var today = new Date();   
+
+       if(today >= date){
+        clearInterval(meow)
+        window.location.href = '/'
+
+       }
+      }, 1000);
+
     fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/performers?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
       .then(res => res.json())
       .then(res => {
