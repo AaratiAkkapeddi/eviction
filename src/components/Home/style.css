@@ -1,6 +1,7 @@
 .listing{
 	display: block;
 	margin: 15px 0;
+	font-size:18px;
 }
 .listings{
 	margin:0 50px;
@@ -23,25 +24,45 @@
 	display: block;
 	margin:0 auto;
 }
+.marquee{
+	position: fixed;
+	top:5px;
+	right:0;
+	width:30%;
 
+	background: #0e0e0e;
+}
 .listings, .happening-now{
 	display: inline-block;
-	width: calc(60% - 100px);
-	padding:25px 0;
+	width: calc(68% - 100px);
+	padding:0px 0;
 }
 
 .happening-now{
-	border:1px solid #0e0e0e;
 	float:right;
 	padding-top:0;
-	width: calc(40% - 100px);
-	margin: 25px 50px;
+	background: #0e0e0e;
+	padding:5px;
+
+	height:100vh;
+	overflow: scroll;
+	width: calc(30%);
+	border-left: 1px solid whitesmoke;
+	margin: 0px 0px;
 	text-align: right;
 	margin-left:0;
+	    position: fixed;
+    top: 0px;
+    right: 0;
 }
 .happening-listing {
-    display: inline-block;
-    width: 50%;
+    display: block;
+	margin: 0 auto;
+
+
+}
+.happening-listing:first-child{
+		padding-top:70px;
 }
 .happening-now img{
 	max-width: 100%;
@@ -67,45 +88,13 @@
 }
 .happening-now h1{
 	font-size:30px;
-	text-align: right;
+	text-align: center;
 	margin-bottom:10px;
 }
 
-.marquee {
-/*	color:blue;*/
-border:1px solid whitesmoke;
-float:right;
-  height: 35px;
-  width: 100%;
-  max-width: 450px;
-  padding-bottom:3px;
-    margin-bottom: 15px;
-font-family:'TelegramaRaw';
-  overflow: hidden;
-  position: relative;
-}
 
 
-.marquee div {
-  display: block;
-  width: 200%;
-  height: 30px;
 
-  position: absolute;
-  overflow: hidden;
-
-  animation: marquee 5s linear infinite;
-}
-
-.marquee h1 {
-  float: left;
-  width: 50%;
-}
-
-@keyframes marquee {
-  0% { left: 0; }
-  100% { left: -100%; }
-}
 
 @media(max-width: 768px){
 	.listings, .happening-now{
@@ -118,6 +107,10 @@ font-family:'TelegramaRaw';
 	}
 	.happening-now{
 		margin-bottom:25px;
+		position: relative;
+		height:auto;
+		border:none;
+		background: transparent;
 	}
 	.listing{
 		margin:0;
@@ -133,6 +126,14 @@ font-family:'TelegramaRaw';
 	.listings{
 		margin:0 15px;
 	}
+	.marquee{
+	position: relative;
+	top:auto;
+	right:auto;
+	width:auto;
+
+	background: transparent;
+}
 	a.happening-listing{
 		display: inline-block;
 		width: 30%;

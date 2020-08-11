@@ -5,13 +5,15 @@ nav{
 	position:fixed;
 	top:0;
 	left:0;
-	margin-left:40px;
+/*	text-align: right;*/
+	padding-left:40px;
+	border-bottom: 1px solid whitesmoke;
 }
 
 nav a {
 	font-size:18px;
 	display: inline-block;
-	margin-right:15px;
+	margin-right:20px;
 	text-decoration: none;
 }
 
@@ -22,5 +24,6 @@ nav a {
 @media(max-width: 768px){
 	nav{
 		margin-left:5px;
+		text-align: center;
 	}
 }

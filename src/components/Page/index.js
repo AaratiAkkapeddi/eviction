@@ -89,7 +89,7 @@ var linkList = document.getElementsByClassName('info')[0];
               <div>
               <div className='info brown-pro'>
               <ReactMarkdown source={records[i].fields.Info} />
-              <a id='extra-back-button-for-no-reason' href='/'>back home</a>
+              <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
               </div>
               <div className='image'>
 
@@ -112,7 +112,7 @@ var linkList = document.getElementsByClassName('info')[0];
               <div className='info brown-pro'>
               <h1>{records[i].fields.Title}</h1>
               <ReactMarkdown source={records[i].fields.Info} />
-              <a id='extra-back-button-for-no-reason' href='/'>back home</a>
+              <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
               </div>
               <div className='image'>
                 {records[i].fields.Image ? 

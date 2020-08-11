@@ -24,10 +24,10 @@ class Navigation extends Component {
 
     return (
 
-    <nav className=''>
-       <a href="/">Home</a>
-       <a href="/about">About</a>
-       <a href="/performer-index">Performers</a>
+    <nav className='brown-pro'>
+       <a href="/">→ Home</a>
+       <a href="/about">→ About</a>
+       <a href="/performer-index">→ Performers</a>
     </nav>
 
 
