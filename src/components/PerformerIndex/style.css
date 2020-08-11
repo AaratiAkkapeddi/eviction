@@ -1,9 +1,13 @@
 .performer-listing{
-	display: inline-block;
-	width:33%;
+/*	display: inline-block;
+	width:33%;*/
 	border: 1px solid whitesmoke;
 	padding:10px;
-	width:200px;
+	width:400px;
+	transform:scale(0.8) rotateY(30deg)  translateX(135px);
+	display: block;
+	background: #0e0e0e;
+	transition: transform 0.2s;
 	vertical-align: top;
 	text-decoration: none;
 /*height: 200px;*/
@@ -11,29 +15,88 @@
 .performer-listing span{
 	margin-top:15px;
 }
+
+.flickity-prev-next-button{
+	background: transparent;
+	top:42% !important;
+	width:60px !important;
+	height:60px !important;
+
+}
+.flickity-prev-next-button.next{
+	top:39% !important;
+}
+.flickity-prev-next-button svg{
+	stroke:whitesmoke;
+	fill:none;
+	width:100px;
+	stroke-width:4px;
+}
 .performer-listing .performer-card{
 	width:100%;
-	height: 200px;
+	height: 400px;
 	margin-bottom:15px;
 	background-size:cover;
 	background-position:center;
 }
-
+.flickity-button:hover{
+	background: transparent;
+}
+.flickity-button{
+	background: transparent !important;
+}
+.flickity-prev-next-button.next{
+	right:-30px !important;
+}
+.flickity-prev-next-button.previous{
+	left:-30px !important;
+}
 .performer-listings{
 	display: block;
 	margin: 0 50px;
 	margin-top:70px;
+	text-align: center;
 }
-
+.test{
+	height:600px;
+	width:1000px;
+	display: block;
+	margin: 0 auto;
+}
+.performer-listing.is-selected{
+	transform:none;
+	z-index: 2;
+}
+.performer-listing.is-selected + .performer-listing{
+	transform:scale(0.8) rotateY(30deg)  translateX(-135px);
+}
+/*.performer-listing:first-child{
+		transform:scale(0.9) rotateY(30deg) skewY(3deg);
+}*/
+.performer-listing:first-child.is-selected{
+		transform: none;	
+}
 @media(max-width: 768px){
 	.performer-listings{
 		margin:0 15px;
 		margin-top:60px;
 	}
 	.performer-listing{
-		width:140px;
+		width:90%;
+		opacity: 0;
+	}
+	.performer-listing.is-selected{
+		opacity: 1;
 	}
 	.performer-listing .performer-card{
-		height: 140px;
+		height: 280px;
+		transition:0;
 	}
+	.test{
+		height:400px;
+		width:90%;
+		display: block;
+		margin: 0 auto;
+	}
+
 }

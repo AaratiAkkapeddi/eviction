@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import Slider from '../Slider'
 
 class PerformerIndex extends Component {
   constructor(props) {
@@ -76,7 +77,21 @@ class PerformerIndex extends Component {
 
     <header className="App-header Homepage">
        <div className='performer-listings'>
-         {listings}
+       <Slider
+            options={{
+              autoPlay: 4000,
+              pauseAutoPlayOnHover: true,
+              wrapAround: true,
+              fullscreen: true,
+              draggable:false,
+              pageDots: false,
+              arrowShape:"M29.94,56.65c-9.4-9.27-19.28-19.16-28.5-27.89L29.89.71M1.44,28.76l47,.06",
+              adaptiveHeight: false,
+            }}
+          >
+                    {listings}
+          </Slider>
+
          <br/><a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
        </div>
 

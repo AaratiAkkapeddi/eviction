@@ -138,6 +138,9 @@
 		display: inline-block;
 		width: 30%;
 	}
+	.happening-listing:first-child{
+		padding-top:0px;
+}
 
 	#pop-up{
 		width:calc(100vw - 40px);
