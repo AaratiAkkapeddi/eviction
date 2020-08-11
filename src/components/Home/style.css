@@ -114,6 +114,10 @@
 	}
 	.listing{
 		margin:0;
+	}#over-modal{
+		height:100vh;
+		display: block;
+		overflow: scroll;
 	}
 	#over-modal > div{
 	max-width: 800px;
@@ -142,8 +146,16 @@
 		padding-top:0px;
 }
 
+#pop-up button{
+	padding:0;
+			margin-bottom:40px;
+}
 	#pop-up{
+		display: block;
+		height:100vh;
+		overflow: scroll;
 		width:calc(100vw - 40px);
 		padding:20px;
+
 	}
 }
