@@ -21,7 +21,7 @@ class PerformerIndex extends Component {
 
   componentDidMount() {
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597204800
+        let unix_timestamp = 1597287600
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
@@ -33,7 +33,17 @@ class PerformerIndex extends Component {
 
        }
       }, 1000);
+   var unix_timestamp = 1597287600
+      let almost_unix_timestamp = 1597285800
+    // Create a new JavaScript Date object based on the timestamp
+    // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+    var almost_date = new Date(almost_unix_timestamp * 1000);
+    var today = new Date();   
+   if(today > almost_date){
+    var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
+    alert(Math.floor(almost/60) + 'minutes until this platform fully self destructs')
 
+   }
     fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/performers?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
       .then(res => res.json())
       .then(res => {

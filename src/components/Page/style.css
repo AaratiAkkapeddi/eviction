@@ -38,6 +38,7 @@
     padding-top: 30px;
     margin-top: -50px;
     margin-left: 0;
+    min-height:calc(100vh - 80px);
     border-left: 1px solid white;
 
 }
@@ -56,6 +57,7 @@
 		padding: 0px;
 	}
 	.image{
+		min-height: auto;
 		float: right;
 	    padding-left: 30px;
 	    padding-top: 0px;

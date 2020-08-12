@@ -67,7 +67,10 @@ p{
 .section{
   margin-top:5rem;
 }
-
+.oops-message{
+  margin-top:75px;
+  margin-left:50px;
+}
 h1,h2,h3,h4{
   font-size:40px;
   font-family: "TelegramaRaw";
@@ -85,5 +88,8 @@ h1,h2,h3,h4{
 }
 body{
   font-size:20px;
+}
+.oops-message{
+  margin-left:15px;
 }
 }

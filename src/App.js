@@ -10,7 +10,14 @@ import {
 } from "react-router-dom";
 import './App.css';
 import {Home, Page, Navigation, Performer, PerformerIndex, About} from './components'
-
+const NoMatchPage = () => {
+  return (
+    <div>
+      <Navigation></Navigation>
+      <h3 className='oops-message text-large'>404 Woops! This page does not exist. Maybe try going <a className='link' href='/'>Home</a>?</h3>
+    </div>
+  );
+};
 
 class App extends React.Component {
   constructor(props){
@@ -62,6 +69,7 @@ render() {
         <Navigation/>
           <About/>
         </Route>
+        <Route component={NoMatchPage} />
       </Switch>
     </div>
     </Router>
