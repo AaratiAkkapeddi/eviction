@@ -21,7 +21,7 @@ class PerformerIndex extends Component {
 
   componentDidMount() {
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597321800
+        let unix_timestamp = 1597348800
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
@@ -34,9 +34,9 @@ class PerformerIndex extends Component {
        }
       }, 1000);
 
-   let unix_timestamp = 1597321800
+   let unix_timestamp = 1597348800
  var date = new Date(unix_timestamp * 1000);
-      let almost_unix_timestamp = 1597320000
+      let almost_unix_timestamp = 1597347000
     // Create a new JavaScript Date object based on the timestamp
     // multiplied by 1000 so that the argument is in milliseconds, not seconds.
     var almost_date = new Date(almost_unix_timestamp * 1000);
