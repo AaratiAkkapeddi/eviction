@@ -75,13 +75,7 @@ class Performer extends Component {
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
                     aList[i].textContent = newtext;
                   }
               }
@@ -112,14 +106,7 @@ class Performer extends Component {
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
                     pList[i].textContent = newtext;
                   }
               }

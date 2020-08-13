@@ -77,14 +77,7 @@ class Page extends Component {
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
                     hList[i].textContent = newtext;
                     console.log(newtext)
                   }
@@ -114,15 +107,7 @@ class Page extends Component {
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
                     aList[i].textContent = newtext;
                   }
               }
