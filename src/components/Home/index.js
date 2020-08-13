@@ -23,7 +23,7 @@ this.popCherry = this.popCherry.bind(this)
    }
   componentDidMount(){
 
-    let unix_timestamp = 1597287600
+    let unix_timestamp = 1597321800
     // Create a new JavaScript Date object based on the timestamp
     // multiplied by 1000 so that the argument is in milliseconds, not seconds.
     var date = new Date(unix_timestamp * 1000);
@@ -35,12 +35,15 @@ this.popCherry = this.popCherry.bind(this)
     this.setState({dansucks: false})
    }
 
-let almost_unix_timestamp = 1597285800
+let almost_unix_timestamp = 1597320000
+
+ var date = new Date(unix_timestamp * 1000);
     // Create a new JavaScript Date object based on the timestamp
     // multiplied by 1000 so that the argument is in milliseconds, not seconds.
     var almost_date = new Date(almost_unix_timestamp * 1000);
     var today = new Date();   
-   if(today > almost_date){
+   if(today > almost_date && today < date){
+
     var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
     alert(Math.floor(almost/60) + 'minutes until this platform fully self destructs')
 
@@ -65,9 +68,9 @@ let almost_unix_timestamp = 1597285800
     var hList = document.getElementsByTagName('h1');
     if(hList){
       for (var i = hList.length - 1; i >= 0; i--) {
-         var unix_timestamp = 1597287600
-              let almost_unix_timestamp = 1597285800
-              //1597285800
+         var unix_timestamp = 1597321800
+              let almost_unix_timestamp = 1597320000
+              //1597320000
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
                 var almost_date = new Date(almost_unix_timestamp * 1000);
@@ -102,9 +105,9 @@ let almost_unix_timestamp = 1597285800
     var aList = document.getElementsByTagName('a');
     if(aList){
       for (var i = aList.length - 1; i >= 0; i--) {
-         var unix_timestamp = 1597287600
-              let almost_unix_timestamp = 1597285800
-              //1597285800
+         var unix_timestamp = 1597321800
+              let almost_unix_timestamp = 1597320000
+              //1597320000
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
                 var almost_date = new Date(almost_unix_timestamp * 1000);
@@ -138,8 +141,8 @@ let almost_unix_timestamp = 1597285800
     var imgList = document.getElementsByTagName('img');
     if(imgList){
       for (var i = 0; i < imgList.length; i++) {
-              var unix_timestamp = 1597287600
-              let almost_unix_timestamp = 1597285800
+              var unix_timestamp = 1597321800
+              let almost_unix_timestamp = 1597320000
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
                 var almost_date = new Date(almost_unix_timestamp * 1000);
