@@ -104,7 +104,7 @@ class PerformerIndex extends Component {
                     {listings}
           </Slider>
 
-         <br/><a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
+         <br/>
        </div>
 
     </header>

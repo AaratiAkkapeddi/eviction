@@ -237,7 +237,7 @@ var linkList = document.getElementsByClassName('info')[0];
               </div>
               <div className='info brown-pro'>
               <ReactMarkdown source={records[i].fields.Info} />
-              <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
+              <a id='extra-back-button-for-no-reason' href='/'>↩ back to listings</a>
               </div>
           
               </div>

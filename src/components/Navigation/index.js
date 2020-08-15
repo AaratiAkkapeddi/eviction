@@ -25,7 +25,7 @@ class Navigation extends Component {
     return (
 
     <nav className='brown-pro'>
-       <a href="/">→ Home</a>
+       <a href="/">→ Listings</a>
        <a href="/about">→ About</a>
        <a href="/performer-index">→ Performers</a>
     </nav>
