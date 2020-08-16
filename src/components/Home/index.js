@@ -49,17 +49,26 @@ this.noChat = this.noChat.bind(this);
       }
      var meow = setInterval(function(){ 
         let unix_timestamp = 1597636800;
+        var almost =  unix_timestamp - Math.floor(Date.now() / 1000)var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
         var today = new Date();   
-
+        if(almost < 120 && almost > 118){
+          createPopup()
+          setTimeout(createPopup(),10)
+          setTimeout(createPopup(),20)
+        }
        if(today >= date){
         clearInterval(meow)
         this.setState({dansucks: true})
 
        }
+
       }, 500);
+
+
+
      let unix_timestamp = 1597636800;
     let almost_unix_timestamp = 1597635000;
 

@@ -47,7 +47,25 @@ this.expand = this.expand.bind(this)
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
         var today = new Date();   
+var almost =  unix_timestamp - Math.floor(Date.now() / 1000)var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
+        // Create a new JavaScript Date object based on the timestamp
+        // multiplied by 1000 so that the argument is in milliseconds, not seconds.
 
+        if(almost < 120 && almost > 118){
+          createPopup()
+          setTimeout(createPopup(),10)
+          setTimeout(createPopup(),20)
+        }
+        if(almost < 60 && almost > 78){
+          createPopup()
+          setTimeout(createPopup(),10)
+          setTimeout(createPopup(),20)
+        }
+        if(almost < 30 && almost > 28){
+          createPopup()
+          setTimeout(createPopup(),10)
+          setTimeout(createPopup(),20)
+        }
        if(today >= date){
         clearInterval(meow)
         window.location.href = '/'
