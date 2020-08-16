@@ -5,7 +5,7 @@ import {
   withRouter
 } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-
+import {Navigation} from "../"
 
 class Page extends Component {
   constructor(props) {
@@ -18,8 +18,10 @@ class Page extends Component {
    }
 
   componentDidMount() {
+    let unix_timestamp = 1597636800;
+      let almost_unix_timestamp = 1597635000;
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597548600
+        let unix_timestamp = 1597636800
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
@@ -31,8 +33,7 @@ class Page extends Component {
 
        }
       }, 1000);
-   var unix_timestamp = 1597548600
-      let almost_unix_timestamp = 1597546800
+
 
  var date = new Date(unix_timestamp * 1000);
     // Create a new JavaScript Date object based on the timestamp
@@ -52,12 +53,12 @@ class Page extends Component {
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
+    let unix_timestamp = 1597636800;
+      let almost_unix_timestamp = 1597635000;
  var hList = document.getElementsByTagName('h1');
     if(hList){
       for (var i = hList.length - 1; i >= 0; i--) {
-         var unix_timestamp = 1597548600
 
-              let almost_unix_timestamp = 1597546800
               //1597546800
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -88,8 +89,7 @@ class Page extends Component {
         var aList = document.getElementsByTagName('a');
     if(aList){
       for (var i = aList.length - 1; i >= 0; i--) {
-         var unix_timestamp = 1597548600
-              let almost_unix_timestamp = 1597546800
+
               //1597546800
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -116,8 +116,7 @@ class Page extends Component {
     var pList = document.getElementsByTagName('p');
     if(pList){
       for (var i = pList.length - 1; i >= 0; i--) {
-         var unix_timestamp = 1597548600
-              let almost_unix_timestamp = 1597546800
+
               //1597546800
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -146,8 +145,7 @@ class Page extends Component {
         var imgList = document.getElementsByTagName('img');
     if(imgList){
       for (var i = 0; i < imgList.length; i++) {
-              var unix_timestamp = 1597548600
-              let almost_unix_timestamp = 1597173420
+
               //1597546800
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -174,8 +172,7 @@ var linkList = document.getElementsByClassName('info')[0];
     for (var i = 0; i < otherlinks.length; i++) {
 
          otherlinks[i].target = "_blank";
-            var unix_timestamp = 1597548600
-        let almost_unix_timestamp = 1597546800
+
           // Create a new JavaScript Date object based on the timestamp
           // multiplied by 1000 so that the argument is in milliseconds, not seconds.
           var almost_date = new Date(almost_unix_timestamp * 1000);
@@ -237,7 +234,7 @@ var linkList = document.getElementsByClassName('info')[0];
               </div>
               <div className='info brown-pro'>
               <ReactMarkdown source={records[i].fields.Info} />
-              <a id='extra-back-button-for-no-reason' href='/'>↩ back to listings</a>
+
               </div>
           
               </div>
@@ -256,7 +253,7 @@ var linkList = document.getElementsByClassName('info')[0];
               <div className='info brown-pro'>
               <h1>{records[i].fields.Title}</h1>
               <ReactMarkdown source={records[i].fields.Info} />
-              <a id='extra-back-button-for-no-reason' href='/'>↩ back home</a>
+              
               </div>
             
               
@@ -280,6 +277,8 @@ var linkList = document.getElementsByClassName('info')[0];
     return (
 
      <header className="App-header happening">
+     <Navigation/>
+     <a id='extra-back-button-for-no-reason' href='/'>↩ back to listings</a>
          {mycontent}
 
       </header>

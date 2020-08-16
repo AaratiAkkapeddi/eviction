@@ -50,23 +50,22 @@ render() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Navigation/>
           <Home info={info} records={records}/>
         </Route>
          <Route exact path="/page/:id">
-         <Navigation/>
+         
           <Page/>
         </Route>
         <Route exact path="/performer/:id">
-        <Navigation/>
+
           <Performer/>
         </Route>
         <Route exact path="/performer-index">
-        <Navigation/>
+
           <PerformerIndex/>
         </Route>
         <Route exact path="/about">
-        <Navigation/>
+
           <About/>
         </Route>
         <Route component={NoMatchPage} />

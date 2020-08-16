@@ -1,5 +1,5 @@
 nav{
-	background: blue;
+	background: transparent;
 /*background: linear-gradient(0deg, rgba(0,0,255,1) 28%, rgba(127,123,250,1) 50%, rgba(0,0,255,1) 73%);*/
 	width:calc(100% - 50px);
 	padding:10px;
@@ -8,19 +8,47 @@ nav{
 	left:0;
 /*	text-align: right;*/
 	padding-left:40px;
-	border: 1px solid whitesmoke;
+
+}
+nav .logo{
+	position: fixed;
+	right:25px;
+	top:5px;
+	font-size:30px;
+	font-family:"TelegramaRaw", monospace;
 }
 
 nav a {
-	background: blue;
+	background: #0041F5;
 /*	color:#EAC805;*/
-/*	border:1px solid white;*/
-	border-radius: 10px;
-	padding:2px;
+	border:1px solid white;
+	border-radius: 18px;
+	padding:2px 5px;
+	font-weight: 400;
 	font-size:18px;
 	display: inline-block;
 	margin-right:20px;
 	text-decoration: none;
+}
+.Homepage nav a:first-child{
+	background: #ECE9D8;
+	border: 1px solid #EA3223;
+	color: #EA3223;
+}
+.About nav a:nth-child(2){
+	background: #ECE9D8;
+	border: 1px solid #EA3223;
+	color: #EA3223;
+}
+.happening nav a:first-child{
+	background: #ECE9D8;
+	border: 1px solid #EA3223;
+	color: #EA3223;
+}
+.performer nav a:nth-child(3){
+	background: #ECE9D8;
+	border: 1px solid #EA3223;
+	color: #EA3223;
 }
 
 #extra-back-button-for-no-reason{

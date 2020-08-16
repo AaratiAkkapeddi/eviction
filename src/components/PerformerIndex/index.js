@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import Slider from '../Slider'
+import {Navigation} from "../"
 
 class PerformerIndex extends Component {
   constructor(props) {
@@ -20,8 +21,10 @@ class PerformerIndex extends Component {
    }
 
   componentDidMount() {
+    let unix_timestamp = 1597636800;
+      let almost_unix_timestamp = 1597635000;
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597548600
+        let unix_timestamp = 1597636800
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
@@ -34,9 +37,9 @@ class PerformerIndex extends Component {
        }
       }, 1000);
 
-   let unix_timestamp = 1597548600
+
  var date = new Date(unix_timestamp * 1000);
-      let almost_unix_timestamp = 1597546800
+
     // Create a new JavaScript Date object based on the timestamp
     // multiplied by 1000 so that the argument is in milliseconds, not seconds.
     var almost_date = new Date(almost_unix_timestamp * 1000);
@@ -87,7 +90,8 @@ class PerformerIndex extends Component {
 
     return (
 
-    <header className="App-header Homepage">
+    <header className="App-header performer">
+    <Navigation/>
        <div className='performer-listings'>
        <Slider
             options={{

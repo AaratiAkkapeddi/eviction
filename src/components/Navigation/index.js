@@ -28,6 +28,7 @@ class Navigation extends Component {
        <a href="/">→ Listings</a>
        <a href="/about">→ About</a>
        <a href="/performer-index">→ Performers</a>
+       <div className='logo'> E-Viction </div>
     </nav>
 
 
