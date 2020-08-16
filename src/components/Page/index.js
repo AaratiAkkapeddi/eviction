@@ -15,6 +15,8 @@ class Page extends Component {
       pass: false
     };
     this.enterPass = this.enterPass.bind(this);
+    this.minimize = this.minimize.bind(this)
+this.expand = this.expand.bind(this)
    }
 
   componentDidMount() {
@@ -186,7 +188,14 @@ var linkList = document.getElementsByClassName('info')[0];
     }
   }
   }
-
+  minimize(){
+    var el = document.getElementsByClassName('happening-now')[0];
+    el.classList.add('closed')
+  }
+  expand(){
+    var el = document.getElementsByClassName('happening-now')[0];
+    el.classList.remove('closed')
+  }
   enterPass(event, correct){
 
     if(event.target.value == correct){
@@ -221,8 +230,13 @@ var linkList = document.getElementsByClassName('info')[0];
                 :"" }
             {pass ? 
               <div>
-                  <div className='image'>
+                  <div className='image happening-now'>
+                  <div className='top-bar'>
+        <button onClick={this.minimize}>✕</button>
+        <button onClick={this.expand}>+</button>
 
+       </div>
+                <div className='inner-popup'>
                 {records[i].fields.Image ? 
                   records[i].fields.Image.map((j,i)=>{
                     return(
@@ -231,6 +245,8 @@ var linkList = document.getElementsByClassName('info')[0];
                   })
                   
                 : "" }
+
+                </div>
               </div>
               <div className='info brown-pro'>
               <ReactMarkdown source={records[i].fields.Info} />
@@ -245,10 +261,17 @@ var linkList = document.getElementsByClassName('info')[0];
         mew = (
           <div>
 
-            <div className='image'>
+            <div className='image happening-now'>
+            <div className='top-bar'>
+        <button onClick={this.minimize}>✕</button>
+        <button onClick={this.expand}>+</button>
+
+       </div>
+            <div className='inner-popup'>
                 {records[i].fields.Image ? 
                   <img src={records[i].fields.Image[0].url}/>
                 : "" }
+                </div>
               </div>
               <div className='info brown-pro'>
               <h1>{records[i].fields.Title}</h1>

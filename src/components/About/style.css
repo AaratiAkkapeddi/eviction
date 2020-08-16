@@ -12,14 +12,31 @@
 .about h2{
 	font-size:40px;
 }
+.poster{
+	position: absolute;
+	top:100px;
+	right:25px;
+	width:calc(90% - 800px);
+}
 
 @media(max-width: 768px){
+	.poster{
+		width: calc(100% - 20px);
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		top: 0;
+    right: auto;
+	}
 	.about{
 		margin:15px;
 		margin-top:5rem;
 		max-width: 800px;
 	}
 	.about h2{
-	font-size:34px;
-}
+	font-size:20px;
+	}
+ .about p{
+    font-size:15px;
+  }
 }

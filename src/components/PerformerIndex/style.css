@@ -1,12 +1,15 @@
 .performer-listing{
 /*	display: inline-block;
 	width:33%;*/
-	border: 1px solid whitesmoke;
+	border: 2px solid black;
 	padding:10px;
 	width:400px;
 	transform:scale(0.8) rotateY(30deg)  translateX(135px);
 	display: block;
-	background: #0e0e0e;
+	background: rgb(246,243,0);	
+	background: -webkit-linear-gradient(left, #F0F453 0%, #EA3223 100%);
+	background: -o-linear-gradient(left, #F0F453 0%, #EA3223 100%);
+	background: linear-gradient(to right, #F0F453 0%, #EA3223 100%);;
 	transition: transform 0.2s;
 	vertical-align: top;
 	text-decoration: none;
@@ -14,6 +17,9 @@
 }
 .performer-listing span{
 	margin-top:15px;
+
+	color:black;
+	font-family: "TelegramaRaw", monospace;
 }
 
 .flickity-prev-next-button{
@@ -79,7 +85,7 @@
 @media(max-width: 768px){
 	.performer-listings{
 		margin:0 15px;
-		margin-top:60px;
+		margin-top:75px;
 	}
 	.performer-listing{
 		width:90%;

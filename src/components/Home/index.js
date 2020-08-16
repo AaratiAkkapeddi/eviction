@@ -21,6 +21,8 @@ class Home extends Component {
       dansucks: false,
     };
 this.popCherry = this.popCherry.bind(this)
+this.minimize = this.minimize.bind(this)
+this.expand = this.expand.bind(this)
    }
   componentDidMount(){
 let unix_timestamp = 1597636800;
@@ -158,6 +160,14 @@ let unix_timestamp = 1597636800;
     }
 	}
   }
+  minimize(){
+    var el = document.getElementsByClassName('happening-now')[0];
+    el.classList.add('closed')
+  }
+  expand(){
+    var el = document.getElementsByClassName('happening-now')[0];
+    el.classList.remove('closed')
+  }
 
   popCherry(){
   this.setState({cherry: true})
@@ -246,6 +256,7 @@ let unix_timestamp = 1597636800;
     {!cherry ? 
     <div id='pop-up'>
     <div className='inner'>
+      <span id='mobile-only'>*Note: we suggest viewing this site on desktop</span>
 	    	{about[0] ? 
 
    				<ReactMarkdown source={about[0].fields.PopupText} />
@@ -257,9 +268,9 @@ let unix_timestamp = 1597636800;
     { happenings.length > 0 ? 
        <div className='happening-now'>
        <div className='top-bar'>
-        <button>✕</button>
-        <button>+</button>
-        <button></button>
+        <button onClick={this.minimize}>✕</button>
+        <button onClick={this.expand}>+</button>
+
        </div>
        <div className='inner-popup'>
 			   <h1 className=''>HAPPENING NOW</h1>

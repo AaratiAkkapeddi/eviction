@@ -8,7 +8,7 @@ nav{
 	left:0;
 /*	text-align: right;*/
 	padding-left:40px;
-
+	z-index: 9;
 }
 nav .logo{
 	position: fixed;
@@ -59,10 +59,23 @@ nav a {
 	nav{
 		margin-left:0px;
 		width: 100%;
-		text-align: center;
+		text-align: left;
 		padding:0;
+		background:#0041F5;
+		padding-bottom:5px;
+
 	}
 	nav a{
-		margin-right:10px;
+		margin-top:40px;
+		font-size:12px;
+		margin-right:0;
+		margin-left:10px;
+	}
+	nav .logo{
+		position: absolute;
+		top:8px;
+		left:10px;
+		font-size:20px;
+		font-family:"TelegramaRaw", monospace;
 	}
 }

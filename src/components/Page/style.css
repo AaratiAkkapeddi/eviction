@@ -32,18 +32,12 @@
 	padding: 0px;
 }
 .image{
-	float: right;
-    width: calc(50% - 100px);
-    padding-left: 30px;
-    padding-top: 30px;
-    margin-top: -50px;
-    margin-left: 0;
-    min-height:calc(100vh - 80px);
-
-
+margin:0;
 }
 .image img{
-	max-width: 100%;
+	max-width: calc(100% - 50px);
+	display: block;
+	margin:15px auto;
 	height: auto;
 }
 /*.link-list a{
@@ -55,16 +49,18 @@
 		width: calc(100% - 30px);
 		margin:0 15px;
 		padding: 0px;
+		position: relative;
+	}
+	.info{
+		margin-top:15px;
 	}
 	.image{
-		min-height: auto;
+		top:0;
+/*		min-height: auto;
 		float: right;
-	    padding-left: 30px;
-	    padding-top: 0px;
-	    padding-bottom:30px;
 	    margin-top: 0;
-	    margin-left: 0;
-	    border-left: none;
+	    margin-left: 0;*/
+
 
 	}
 	

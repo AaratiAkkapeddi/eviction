@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import {Navigation} from "../"
+import poster from "./eviction.png"
 
 class About extends Component {
   constructor(props) {
@@ -195,6 +196,7 @@ var linkList = document.getElementsByClassName('about')[0];
        </div>
        :""
    		}
+      <img className='poster' src={poster}/>
     </header>
 
 

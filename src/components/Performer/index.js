@@ -13,6 +13,8 @@ class Performer extends Component {
     this.state = {
       records:[]
     };
+        this.minimize = this.minimize.bind(this)
+this.expand = this.expand.bind(this)
    }
 
   componentDidMount() {
@@ -157,6 +159,14 @@ class Performer extends Component {
   }
 
   }
+  minimize(){
+    var el = document.getElementsByClassName('happening-now')[0];
+    el.classList.add('closed')
+  }
+  expand(){
+    var el = document.getElementsByClassName('happening-now')[0];
+    el.classList.remove('closed')
+  }
   findRecord(records){
 
       var mew = ' ';
@@ -166,7 +176,13 @@ class Performer extends Component {
       if(records[i].fields.slug == this.props.match.params.id){
         mew = (
           <div className='section'>
-               <div className='image'>
+               <div className='image happening-now'>
+               <div className='top-bar'>
+        <button onClick={this.minimize}>✕</button>
+        <button onClick={this.expand}>+</button>
+
+       </div>
+       <div className='inner-popup'>
                 {records[i].fields.Image ? 
                   records[i].fields.Image.map((j,i)=>{
                     return(
@@ -175,6 +191,7 @@ class Performer extends Component {
                   })
                   
                 : "" }
+                </div>
               </div>
               <div className='info'>
                 <h1>{records[i].fields.Name}</h1>

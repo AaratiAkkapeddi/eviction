@@ -15,12 +15,23 @@
 	top:0;
 	left:0;
 	position: fixed; 
-	background: rgba(0,0,0,0.9);
+	background: #0041F5;
 	z-index: 9999;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding:0 50px;
+}
+#pop-up button{
+
+	color:#EA3223;
+	background: #ECE9D8;
+	border:1px solid #EA3223;
+	padding:2px 10px;
+	font-size:18px;
+	border-radius: 18px;
+	    display: inline-block;
+    margin: 0 auto;
 }
 #pop-up .inner{
 	max-width: 900px;
@@ -46,9 +57,10 @@
 	float:right;
 	padding-top:0;
 	background: transparent;
-
-	max-height:calc(100vh - 50px);
-	overflow: scroll;
+	transition:0.2s;
+	-webkit-transition:0.2s;
+	-moz-transition:0.2s;
+	-o-transition:0.2s;
 	width: calc(42%);
 	border: 2px solid black;
 	margin: 0px 0px;
@@ -58,7 +70,31 @@
     top: 70px;
     right: 25px;
 }
+.happening-now.closed {
+	width: calc(20%);
+	
+}
+.happening-now.closed .inner-popup{
+	height:40px;
+}
+.happening-now.closed .top-bar button:first-child{
+	opacity:0.5;
+}
+.happening-now .top-bar button:nth-child(2){
+	opacity:0.5;
+}
+.happening-now.closed .top-bar button:nth-child(2){
+	opacity:1;
+}
+.happening-now.closed img{
+	display: none;
+}
+.happening-now.closed h1{
+	font-size:24px;
+}
 .happening-now .inner-popup{
+	max-height:calc(100vh - 200px);
+	overflow: scroll;
 	background: rgb(246,243,0);	
 	background: -webkit-linear-gradient(left, #F0F453 0%, #EA3223 100%);
 	background: -o-linear-gradient(left, #F0F453 0%, #EA3223 100%);
@@ -83,6 +119,9 @@
 .happening-now img{
 	max-width: 100%;
 }
+#mobile-only{
+	display:none;
+}
 #over-modal{
 	position: fixed;
 	z-index: 9999999;
@@ -91,7 +130,7 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	background: #0e0e0e;
+	background: #0041F5;
 	width:100vw;
 	height:100vh;
 }
@@ -130,11 +169,14 @@
 		margin-bottom:25px;
 		position: relative;
 		height:auto;
-		border:none;
+	
+		right:auto;
+		top:20px;
 		background: transparent;
 	}
 	.listing{
-		margin:0;
+		margin:20px 0;
+		font-size:15px;
 	}#over-modal{
 		height:100vh;
 		display: block;
@@ -168,8 +210,16 @@
 }
 
 #pop-up button{
-	padding:0;
-			margin-bottom:40px;
+
+			margin-bottom:100px;
+}
+.happening-now.closed{
+	width:calc(35%);
+}
+#mobile-only{
+	display: block;
+	font-size:12px;
+	padding-bottom: 15px;
 }
 	#pop-up{
 		display: block;
