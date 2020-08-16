@@ -27,9 +27,12 @@
 }
 .image, .info{
 	display: inline-block;
-	width: calc(50% - 100px);
+	width: calc(70% - 200px);
 	margin:0 50px;
 	padding: 0px;
+}
+.image.happening-now{
+	width: 30%;
 }
 .image{
 margin:0;
@@ -54,6 +57,9 @@ margin:0;
 	.info{
 		margin-top:15px;
 	}
+	.image.happening-now{
+	width: 90%;
+}
 	.image{
 		top:0;
 /*		min-height: auto;
