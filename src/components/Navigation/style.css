@@ -19,6 +19,7 @@ nav .logo{
 }
 
 nav a {
+	box-shadow:5px 5px 0px rgb(0,0,0,0.7);
 	background: #0041F5;
 /*	color:#EAC805;*/
 	border:1px solid white;
