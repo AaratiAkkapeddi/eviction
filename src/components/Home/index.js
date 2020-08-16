@@ -48,13 +48,23 @@ this.noChat = this.noChat.bind(this);
         parentNode.insertBefore(newNode, parentNode.firstChild);
       }
      var meow = setInterval(function(){ 
-        let unix_timestamp = 1597636800;
-        var almost =  unix_timestamp - Math.floor(Date.now() / 1000)var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
+        let unix_timestamp = 1597629900;
+        var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
         var today = new Date();   
         if(almost < 120 && almost > 118){
+          createPopup()
+          setTimeout(createPopup(),10)
+          setTimeout(createPopup(),20)
+        }
+        if(almost < 60 && almost > 78){
+          createPopup()
+          setTimeout(createPopup(),10)
+          setTimeout(createPopup(),20)
+        }
+        if(almost < 30 && almost > 28){
           createPopup()
           setTimeout(createPopup(),10)
           setTimeout(createPopup(),20)
@@ -69,8 +79,8 @@ this.noChat = this.noChat.bind(this);
 
 
 
-     let unix_timestamp = 1597636800;
-    let almost_unix_timestamp = 1597635000;
+     let unix_timestamp = 1597629900;
+    let almost_unix_timestamp = 1597629600;
 
      var date = new Date(unix_timestamp * 1000);
       // Create a new JavaScript Date object based on the timestamp
@@ -156,8 +166,8 @@ this.noChat = this.noChat.bind(this);
     }
   }
   componentDidUpdate(){
-let unix_timestamp = 1597636800;
-      let almost_unix_timestamp = 1597635000;
+let unix_timestamp = 1597629900;
+      let almost_unix_timestamp = 1597629600;
     var hList = document.getElementsByTagName('h1');
     if(hList){
       for (var i = hList.length - 1; i >= 0; i--) {
