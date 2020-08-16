@@ -66,32 +66,30 @@ class About extends Component {
 
       createPopup()
       if(Math.floor(almost) < 120){
-        createPopup()
-        createPopup()
+         setTimeout(createPopup(),10)
+        setTimeout(createPopup(),20)
       }else if(Math.floor(almost) < 60){
-        createPopup()
-        createPopup()
-        createPopup()
+        setTimeout(createPopup(),10)
+        setTimeout(createPopup(),20)
+        setTimeout(createPopup(),30)
  
       }else if(Math.floor(almost) < 30){
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
+        setTimeout(createPopup(),10)
+        setTimeout(createPopup(),20)
+        setTimeout(createPopup(),30)
+        setTimeout(createPopup(),40)
+        setTimeout(createPopup(),50)
   
         
       }else if(Math.floor(almost) < 10){
         createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
-        createPopup()
+        setTimeout(createPopup(),10)
+        setTimeout(createPopup(),20)
+        setTimeout(createPopup(),30)
+        setTimeout(createPopup(),40)
+        setTimeout(createPopup(),50)
+        setTimeout(createPopup(),100)
+        setTimeout(createPopup(),120)
        
       }
 
