@@ -28,8 +28,9 @@ class About extends Component {
         newNode.style.marginTop = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
         newNode.style.marginBottom = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
         var innerNode = document.createElement('div');
-        var text = Math.floor(almost/60) + ' minutes until this platform fully self destructs'
-        innerNode.innerHTML = "<div class='top-bar'><button onclick='this.parentNode.parentNode.parentNode.remove()'>✕</button></div><div class='inner-popup'>"+text+'<button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">ok</button></div>';
+        var textOptions = ["<h4>CRITICAL ERROR #S3X W00RK</h4><br>Your experience goes against our community guidelines. We’ve erased your experience because it goes against our Community Guidelines on nudity or sexual activity. Our Guidelines are based on our traditional upbringing and our board of directors may be too sensitive to see an illustration of an ass.", "<h4>YOUR ACCOUNT HAS BEEN RESTRICTED</h4><br>Thank you for contacting us. I reviewed your account and can see that it is currently restricted to withdrawing funds from your Cash Balance", "<h4>PROHIBITED USE</h4><br>Our Compliance Team identified your account as having sent or received gifts associated with a prohibited use case. We encourage you to find another payments provider as we cannot process future transactions for you. Going forward, any gifts sent to or from your email address will be automatically canceled.<br>Thank you for your understanding.",'<h4>'+Math.floor(almost/60) + ' minutes until this platform fully self destructs</h4>']
+        var text = textOptions[Math.floor(Math.random() * textOptions.length)];
+        innerNode.innerHTML = "<div class='top-bar'><button onclick='this.parentNode.parentNode.parentNode.remove()'>✕</button></div><div class='inner-popup'>"+text+'<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">ok</button></div>';
         newNode.appendChild(innerNode);
         // Get the parent node
         var parentNode = document.querySelector('body');
@@ -52,7 +53,7 @@ class About extends Component {
         window.location.href = '/'
 
        }
-      }, 1000);
+      }, 500);
 
 
       var date = new Date(unix_timestamp * 1000);
@@ -64,7 +65,35 @@ class About extends Component {
       var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
       createPopup()
+      if(Math.floor(almost) < 120){
+        createPopup()
+        createPopup()
+      }else if(Math.floor(almost) < 60){
+        createPopup()
+        createPopup()
+        createPopup()
+ 
+      }else if(Math.floor(almost) < 30){
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
   
+        
+      }else if(Math.floor(almost) < 10){
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+        createPopup()
+       
+      }
 
 
 
@@ -95,12 +124,37 @@ class About extends Component {
                     var text = hList[i].textContent;
                    var arr = [new RegExp('a',"ig"), new RegExp('b',"ig"), new RegExp('c',"ig"), new RegExp('d',"ig"),new RegExp('e',"ig"),new RegExp('f',"ig"),new RegExp('g',"ig"),new RegExp('h',"ig"),new RegExp('i',"ig"),new RegExp('j',"ig"),new RegExp('k',"ig"),new RegExp('l',"ig"),new RegExp('m',"ig"),new RegExp('n',"ig"),new RegExp('o',"ig"),new RegExp('p',"ig"),new RegExp('q',"ig"),new RegExp('r',"ig"),new RegExp('s',"ig"),new RegExp('t',"ig"),new RegExp('u',"ig"),new RegExp('v',"ig"),new RegExp('w',"ig"),new RegExp('x',"ig"),new RegExp('y',"ig"),new RegExp('z',"ig")]
                      var newtext = text.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                         newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     if(Math.floor(almost) < 120){
+                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     }else if(Math.floor(almost) < 60){
+                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
+
+                     }else if(Math.floor(almost) < 30){
+                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
+                     }else if(Math.floor(almost) < 10){
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     }
+                     
 
                     hList[i].textContent = newtext;
                   }
@@ -123,11 +177,36 @@ class About extends Component {
                     var text = aList[i].textContent;
                    var arr = [new RegExp('a',"ig"), new RegExp('b',"ig"), new RegExp('c',"ig"), new RegExp('d',"ig"),new RegExp('e',"ig"),new RegExp('f',"ig"),new RegExp('g',"ig"),new RegExp('h',"ig"),new RegExp('i',"ig"),new RegExp('j',"ig"),new RegExp('k',"ig"),new RegExp('l',"ig"),new RegExp('m',"ig"),new RegExp('n',"ig"),new RegExp('o',"ig"),new RegExp('p',"ig"),new RegExp('q',"ig"),new RegExp('r',"ig"),new RegExp('s',"ig"),new RegExp('t',"ig"),new RegExp('u',"ig"),new RegExp('v',"ig"),new RegExp('w',"ig"),new RegExp('x',"ig"),new RegExp('y',"ig"),new RegExp('z',"ig")]
                      var newtext = text.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                         newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                      if(Math.floor(almost) < 120){
+                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     }else if(Math.floor(almost) < 60){
+                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
+
+                     }else if(Math.floor(almost) < 30){
+                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
+                     }else if(Math.floor(almost) < 10){
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     }
 
                     aList[i].textContent = newtext;
                   }
@@ -149,10 +228,36 @@ class About extends Component {
                     var text = pList[i].textContent;
                    var arr = [new RegExp('a',"ig"), new RegExp('b',"ig"), new RegExp('c',"ig"), new RegExp('d',"ig"),new RegExp('e',"ig"),new RegExp('f',"ig"),new RegExp('g',"ig"),new RegExp('h',"ig"),new RegExp('i',"ig"),new RegExp('j',"ig"),new RegExp('k',"ig"),new RegExp('l',"ig"),new RegExp('m',"ig"),new RegExp('n',"ig"),new RegExp('o',"ig"),new RegExp('p',"ig"),new RegExp('q',"ig"),new RegExp('r',"ig"),new RegExp('s',"ig"),new RegExp('t',"ig"),new RegExp('u',"ig"),new RegExp('v',"ig"),new RegExp('w',"ig"),new RegExp('x',"ig"),new RegExp('y',"ig"),new RegExp('z',"ig")]
                      var newtext = text.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-          newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+    if(Math.floor(almost) < 120){
+                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     }else if(Math.floor(almost) < 60){
+                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
+
+                     }else if(Math.floor(almost) < 30){
+                      newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+
+                     }else if(Math.floor(almost) < 10){
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
+                     }
 
 
                     pList[i].textContent = newtext;

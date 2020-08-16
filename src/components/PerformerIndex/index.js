@@ -35,7 +35,7 @@ class PerformerIndex extends Component {
         window.location.href = '/'
 
        }
-      }, 1000);
+      }, 500);
 
 
  var date = new Date(unix_timestamp * 1000);
