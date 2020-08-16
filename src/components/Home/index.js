@@ -212,8 +212,24 @@ let unix_timestamp = 1597636800;
 
 	const listings = notHappeningNow.length > 0 ? notHappeningNow.map((x,i)=>{
 
+        var date = new Date(x.fields.StartTime);
+
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+        /*alert(str);*/
+
+ 
+ 
+
 		return(
-			<a key={x.id} className={x.fields.LinkUrl.includes('http') ? "listing external-link":"listing"} href={x.fields.DownloadFile ?  x.fields.DownloadFile[0].url : x.fields.LinkUrl} download={x.fields.DownloadFile ?  true : false}>{x.fields.LinkText}</a>
+			<a key={x.id} className={x.fields.LinkUrl.includes('http') ? "listing external-link":"listing"} href={x.fields.DownloadFile ?  x.fields.DownloadFile[0].url : x.fields.LinkUrl} download={x.fields.DownloadFile ?  true : false}><span className='posted'>Posted {strTime}  </span><span className='text'>{x.fields.LinkText}</span></a>
 		)
 		
 	}) : 'loading'
