@@ -24,6 +24,8 @@ class Home extends Component {
 this.popCherry = this.popCherry.bind(this)
 this.minimize = this.minimize.bind(this)
 this.expand = this.expand.bind(this)
+this.chat = this.chat.bind(this);
+this.noChat = this.noChat.bind(this);
    }
   componentDidMount(){
 let unix_timestamp = 1597636800;
@@ -160,6 +162,12 @@ let unix_timestamp = 1597636800;
      
     }
 	}
+  }
+  chat(){
+    document.getElementsByClassName('chat-room')[0].classList.add("on")
+  }
+  noChat(){
+    document.getElementsByClassName('chat-room')[0].classList.remove("on")
   }
   minimize(){
     var el = document.getElementsByClassName('happening-now')[0];
@@ -310,7 +318,11 @@ let unix_timestamp = 1597636800;
          {listings}
        
        </div>
-       
+       <div className='chat-room'>
+        <button id='no-chat' onClick={this.noChat}>close chat</button>
+        <button id='chat-open' onClick={this.chat}>chat</button>
+        <iframe src="https://minnit.chat/aaratitest?embed&nickname=" allowtransparency="true"></iframe>
+       </div>
     </header>
 
 

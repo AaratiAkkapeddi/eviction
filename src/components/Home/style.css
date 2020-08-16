@@ -46,6 +46,45 @@ margin-right:5px;
 	    display: inline-block;
     margin: 0 auto;
 }
+.chat-room{
+
+	position:fixed;
+	bottom:0;
+	right:25px;
+}
+.chat-room.on #no-chat{
+	display:block;
+}
+.chat-room.on #chat-open{
+	display:none;
+
+}
+.chat-room #no-chat{
+	display:none;
+}
+.chat-room #chat-open{
+	display:block;
+		background: #ECE9D8;
+	border:1px solid #EA3223;
+	color:#EA3223;
+}
+.chat-room button{
+	background: #0041F5;
+	border:1px solid white;
+	color:white;
+	font-size:18px;
+	border-radius: 18px;
+	margin:15px 0px;
+
+}
+
+.chat-room.on iframe{
+	display: block;
+}
+.chat-room iframe{
+	display: none;
+	height:400px;
+}
 #pop-up .inner{
 	max-width: 900px;
 	display: block;

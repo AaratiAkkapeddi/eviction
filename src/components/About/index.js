@@ -19,9 +19,27 @@ class About extends Component {
 
    }
     componentDidMount() {
+      function createPopup(){
+        var newNode = document.createElement('div');
+        newNode.classList.add('happening-now')
+        newNode.classList.add('urgent')
+        newNode.style.marginLeft = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
+        newNode.style.marginRight = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
+        newNode.style.marginTop = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
+        newNode.style.marginBottom = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
+        var innerNode = document.createElement('div');
+        var text = Math.floor(almost/60) + ' minutes until this platform fully self destructs'
+        innerNode.innerHTML = "<div class='top-bar'><button onclick='this.parentNode.parentNode.parentNode.remove()'>✕</button></div><div class='inner-popup'>"+text+'<button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">ok</button></div>';
+        newNode.appendChild(innerNode);
+        // Get the parent node
+        var parentNode = document.querySelector('body');
+
+        // Insert the new node before the reference node
+        parentNode.insertBefore(newNode, parentNode.firstChild);
+      }
 
       let unix_timestamp = 1597636800;
-      let almost_unix_timestamp = 1597635000;
+      let almost_unix_timestamp = 1597610309;
       var meow = setInterval(function(){ 
         let unix_timestamp = 1597636800;
         // Create a new JavaScript Date object based on the timestamp
@@ -38,29 +56,33 @@ class About extends Component {
 
 
       var date = new Date(unix_timestamp * 1000);
-    // Create a new JavaScript Date object based on the timestamp
-    // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-    var almost_date = new Date(almost_unix_timestamp * 1000);
-    var today = new Date();   
-   if(today > almost_date && today < date){
-    var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
-    alert(Math.floor(almost/60) + 'minutes until this platform fully self destructs')
+      // Create a new JavaScript Date object based on the timestamp
+      // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+      var almost_date = new Date(almost_unix_timestamp * 1000);
+      var today = new Date();   
+     if(today > almost_date && today < date){
+      var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
-   }
+      createPopup()
+  
 
-	    fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/introduction?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
-	      .then(res => res.json())
-	      .then(res => {
-	        this.setState({ about: res.records })
-	      })
-	      .catch(error => console.log(error))
+
+
+     }
+
+  	    fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/introduction?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
+  	      .then(res => res.json())
+  	      .then(res => {
+  	        this.setState({ about: res.records })
+  	      })
+  	      .catch(error => console.log(error))
 	  }
-      componentDidUpdate(){
+    componentDidUpdate(){
         let unix_timestamp = 1597636800;
-      let almost_unix_timestamp = 1597635000;
-                    var hList = document.getElementsByTagName('h2');
-    if(hList){
-      for (var i = hList.length - 1; i >= 0; i--) {
+        let almost_unix_timestamp = 1597610309;
+        var hList = document.getElementsByTagName('h2');
+        if(hList){
+          for (var i = hList.length - 1; i >= 0; i--) {
               //1597546800
                 // Create a new JavaScript Date object based on the timestamp
                 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
