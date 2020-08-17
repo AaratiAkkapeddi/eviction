@@ -30,7 +30,7 @@ class PerformerIndex extends Component {
         newNode.style.marginTop = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
         newNode.style.marginBottom = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
         var innerNode = document.createElement('div');
-        var textOptions = ["<h4>CRITICAL ERROR #S3X W00RK</h4><br>Your experience goes against our community guidelines. We’ve erased your experience because it goes against our Community Guidelines on nudity or sexual activity. Our Guidelines are based on our traditional upbringing and our board of directors may be too sensitive to see an illustration of an ass.", "<h4>YOUR ACCOUNT HAS BEEN RESTRICTED</h4><br>Thank you for contacting us. I reviewed your account and can see that it is currently restricted to withdrawing funds from your Cash Balance", "<h4>PROHIBITED USE</h4><br>Our Compliance Team identified your account as having sent or received gifts associated with a prohibited use case. We encourage you to find another payments provider as we cannot process future transactions for you. Going forward, any gifts sent to or from your email address will be automatically canceled.<br>Thank you for your understanding.",'<h4>'+Math.floor(almost/60) + ' minutes until this platform fully self destructs</h4>']
+        var textOptions = ["<h4>CRITICAL ERROR #S3X W00RK</h4><br>Your experience goes against our community guidelines. We’ve erased your experience because it goes against our Community Guidelines on nudity or sexual activity. Our Guidelines are based on our traditional upbringing and our board of directors may be too sensitive to see an illustration of an ass.", "<h4>YOUR ACCOUNT HAS BEEN RESTRICTED</h4><br>Thank you for contacting us. I reviewed your account and can see that it is currently restricted to withdrawing funds from your Cash Balance", "<h4>PROHIBITED USE</h4><br>Our Compliance Team identified your account as having sent or received gifts associated with a prohibited use case. We encourage you to find another payments provider as we cannot process future transactions for you. Going forward, any gifts sent to or from your email address will be automatically canceled.<br>Thank you for your understanding.",'<h4>'+Math.floor(almost) + ' seconds until this platform fully self destructs</h4>']
         var text = textOptions[Math.floor(Math.random() * textOptions.length)];
         innerNode.innerHTML = "<div class='top-bar'><button onclick='this.parentNode.parentNode.parentNode.remove()'>✕</button></div><div class='inner-popup'>"+text+'<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">ok</button></div>';
         newNode.appendChild(innerNode);
@@ -40,10 +40,10 @@ class PerformerIndex extends Component {
         // Insert the new node before the reference node
         parentNode.insertBefore(newNode, parentNode.firstChild);
       }
-    let unix_timestamp = 1597629900;
-      let almost_unix_timestamp = 1597629600;
+    let unix_timestamp = 1597716180;
+      let almost_unix_timestamp = 1597716000;
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597629900
+        let unix_timestamp = 1597716180
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
@@ -54,18 +54,32 @@ var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
         if(almost < 120 && almost > 118){
           createPopup()
-          setTimeout(createPopup(),10)
-          setTimeout(createPopup(),20)
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
         }
         if(almost < 60 && almost > 78){
           createPopup()
-          setTimeout(createPopup(),10)
-          setTimeout(createPopup(),20)
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
         }
         if(almost < 30 && almost > 28){
           createPopup()
-          setTimeout(createPopup(),10)
-          setTimeout(createPopup(),20)
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
+        }
+         if(almost < 20 && almost > 18){
+          createPopup()
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
+          setTimeout(createPopup,4000)
+          setTimeout(createPopup,5000)
+        }
+         if(almost < 10 && almost > 8){
+          createPopup()
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
+          setTimeout(createPopup,4000)
+          setTimeout(createPopup,5000)
         }
        if(today >= date){
         clearInterval(meow)
@@ -88,30 +102,30 @@ var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
       createPopup()
       if(Math.floor(almost) < 120){
-         setTimeout(createPopup(),10)
-        setTimeout(createPopup(),20)
+         setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
       }else if(Math.floor(almost) < 60){
-        setTimeout(createPopup(),10)
-        setTimeout(createPopup(),20)
-        setTimeout(createPopup(),30)
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
+        setTimeout(createPopup,3000)
  
       }else if(Math.floor(almost) < 30){
-        setTimeout(createPopup(),10)
-        setTimeout(createPopup(),20)
-        setTimeout(createPopup(),30)
-        setTimeout(createPopup(),40)
-        setTimeout(createPopup(),50)
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
+        setTimeout(createPopup,3000)
+        setTimeout(createPopup,4000)
+        setTimeout(createPopup,5000)
   
         
       }else if(Math.floor(almost) < 10){
         createPopup()
-        setTimeout(createPopup(),10)
-        setTimeout(createPopup(),20)
-        setTimeout(createPopup(),30)
-        setTimeout(createPopup(),40)
-        setTimeout(createPopup(),50)
-        setTimeout(createPopup(),100)
-        setTimeout(createPopup(),120)
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
+        setTimeout(createPopup,3000)
+        setTimeout(createPopup,4000)
+        setTimeout(createPopup,5000)
+        setTimeout(createPopup,10000)
+        setTimeout(createPopup,12000)
        
       }
 
