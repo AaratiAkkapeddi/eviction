@@ -16,7 +16,8 @@ class PerformerIndex extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      records:[]
+      records:[],
+      about: []
     };
    }
 
@@ -140,12 +141,19 @@ var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
         this.setState({ records: res.records })
       })
       .catch(error => console.log(error))
+
+      fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/introduction?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
+        .then(res => res.json())
+        .then(res => {
+          this.setState({ about: res.records })
+        })
+        .catch(error => console.log(error))
   }
   componentDidUpdate(){
 
   }
    render() {
-    const {records} = this.state;
+    const {records, about} = this.state;
 
   const listings = records.length > 0 ? records.map((x,i)=>{
     if(x.fields.Image){
@@ -194,6 +202,10 @@ var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
           </Slider>
 
          <br/>
+         {about[0] ? 
+
+          <ReactMarkdown source={about[0].fields.Schedule} />
+          : "" }
        </div>
 
     </header>
