@@ -403,6 +403,8 @@ var linkList = document.getElementsByClassName('info')[0];
          }else{
         mew = (
           <div>
+                      {records[i].fields.Image ? 
+          <div>
 
             <div className='image happening-now'>
             <div className='top-bar'>
@@ -411,9 +413,9 @@ var linkList = document.getElementsByClassName('info')[0];
 
        </div>
             <div className='inner-popup'>
-                {records[i].fields.Image ? 
+      
                   <img src={records[i].fields.Image[0].url}/>
-                : "" }
+               
                 </div>
               </div>
               <div className='info brown-pro'>
@@ -422,9 +424,10 @@ var linkList = document.getElementsByClassName('info')[0];
               
               </div>
             
-              
+             
             </div>
-            
+            : "" }
+            </div>
           )
          }
          

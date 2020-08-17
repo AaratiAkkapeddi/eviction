@@ -157,6 +157,10 @@ margin-right:5px;
 }
 .happening-now h1{
 	color: red;
+	font-weight: bold;
+	background: -webkit-linear-gradient(left, red 50%, yellow 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .happening-listing {
     display: inline-block;
