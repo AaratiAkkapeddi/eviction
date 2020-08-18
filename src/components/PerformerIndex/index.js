@@ -41,10 +41,10 @@ class PerformerIndex extends Component {
         // Insert the new node before the reference node
         parentNode.insertBefore(newNode, parentNode.firstChild);
       }
-    let unix_timestamp = 1597716180;
-      let almost_unix_timestamp = 1597716000;
+    let unix_timestamp = 1597802422;
+      let almost_unix_timestamp = 1597802220;
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597716180
+        let unix_timestamp = 1597802422
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);

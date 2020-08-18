@@ -101,11 +101,12 @@ body{
   font-size:12px;
 }
 a, a:hover, a:focus, a:active{
-  color: inherit;
+  color: #F0F453;
 }
 a.listing:visited{
 /*  color: #551A8B;*/
-  color: black;
+/*  color: #EA3223;*/
+color:#ef98e8;
 }
 a.link, a.link:hover, a.link:focus, a.link:active{
   color: whitesmoke;
