@@ -22,7 +22,7 @@ class PerformerIndex extends Component {
    }
 
   componentDidMount() {
-      let destruction = 1597867200;
+      let destruction = 1597975200;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
       /* DECAY POPUP GENERATOR */
@@ -48,7 +48,7 @@ class PerformerIndex extends Component {
  /* END DECAY POPUP GENERATOR */
      /* INTERVAL */
     var meow = setInterval(function(){ 
-        let destruction = 1597867200;
+        let destruction = 1597975200;
         let unix_timestamp = destruction - 900;//when redirect happens
         let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         // Create a new JavaScript Date object based on the timestamp
@@ -60,20 +60,20 @@ class PerformerIndex extends Component {
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
 
         /* DECAY POPUPS */
-        createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
+        // createPopup()
+        // setTimeout(createPopup,1000)
+        // setTimeout(createPopup,2000)
 
-        if(almost < 120 && almost > 118){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
-        if(almost < 60 && almost > 780){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
+        // if(almost < 120 && almost > 118){
+        //   createPopup()
+        //   setTimeout(createPopup,1000)
+        //   setTimeout(createPopup,2000)
+        // }
+        // if(almost < 60 && almost > 780){
+        //   createPopup()
+        //   setTimeout(createPopup,1000)
+        //   setTimeout(createPopup,2000)
+        // }
 
 
 
@@ -98,18 +98,18 @@ class PerformerIndex extends Component {
       var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
         createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
+        setTimeout(createPopup,4000)
+        setTimeout(createPopup,10000)
 
 
-      if(Math.floor(almost) < 120){
-         setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-      }else if(Math.floor(almost) < 60){
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-        setTimeout(createPopup,3000)
-      }
+      // if(Math.floor(almost) < 120){
+      //    setTimeout(createPopup,1000)
+      //   setTimeout(createPopup,2000)
+      // }else if(Math.floor(almost) < 60){
+      //   setTimeout(createPopup,1000)
+      //   setTimeout(createPopup,2000)
+      //   setTimeout(createPopup,3000)
+      // }
 
 
 

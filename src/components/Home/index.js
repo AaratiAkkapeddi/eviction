@@ -10,7 +10,7 @@ import {
 import ReactMarkdown from "react-markdown";
 import {Navigation} from "../"
 import Iframe from 'react-iframe'
-
+import ReactPlayer from "react-player";
 
 class Home extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ this.chat = this.chat.bind(this);
 this.noChat = this.noChat.bind(this);
    }
   componentDidMount(){
-    let destruction = 1597867200;
+    let destruction = 1597975200;
     let unix_timestamp = destruction - 900;//when redirect happens
     let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 /* DECAY POPUP GENERATOR */
@@ -54,7 +54,7 @@ this.noChat = this.noChat.bind(this);
        /* END DECAY POPUP GENERATOR */
            /* INTERVAL */
      var meow = setInterval(function(){ 
-        let destruction = 1597867200;
+        let destruction = 1597975200;
         let unix_timestamp = destruction - 900;//when redirect happens
         let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
@@ -79,7 +79,12 @@ this.noChat = this.noChat.bind(this);
         // }
 
 
-
+        if(almost_unix_timestamp - Math.floor(Date.now() / 1000) <= 0){
+          var happening = document.getElementsByClassName('happening-now-livestream')[0]
+          if(happening){
+            happening.classList.remove('off')
+          }
+        }
       /* REDIRECT */
        if(almost <= 0 ){
         window.location.href = '/livestream'
@@ -101,7 +106,7 @@ this.noChat = this.noChat.bind(this);
       var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
         createPopup()
-        setTimeout(createPopup,1000)
+        setTimeout(createPopup,3000)
       //   setTimeout(createPopup,2000)
 
 
@@ -163,7 +168,7 @@ this.noChat = this.noChat.bind(this);
   }
   componentDidUpdate(){
 
-      let destruction = 1597867200;
+      let destruction = 1597975200;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 
@@ -453,8 +458,19 @@ this.noChat = this.noChat.bind(this);
 			   <h1 className=''>HAPPENING NOW</h1>
          <div>
          {happenings}
+          <div className='happening-listing happening-now-livestream off'>
+         <ReactPlayer
+      url="https://www.youtube.com/embed/_HbnJ64lu0I"
+      playing={true}
+      width="100%"
+      muted={true}
+      height="100px"
+    />
+        </div>
          </div>
+
          </div>
+        
        </div>
        :""
    		}

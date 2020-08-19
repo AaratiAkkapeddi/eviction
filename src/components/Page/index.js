@@ -20,7 +20,7 @@ this.expand = this.expand.bind(this)
    }
 
   componentDidMount() {
-    let destruction = 1597867200;
+    let destruction = 1597975200;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
       /* DECAY POPUP GENERATOR */
@@ -46,7 +46,7 @@ this.expand = this.expand.bind(this)
        /* END DECAY POPUP GENERATOR */
     /* INTERVAL */
     var meow = setInterval(function(){ 
-        let destruction = 1597867200;
+        let destruction = 1597975200;
         let unix_timestamp = destruction - 900;//when redirect happens
         let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         // Create a new JavaScript Date object based on the timestamp
@@ -57,20 +57,20 @@ this.expand = this.expand.bind(this)
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
 /* DECAY POPUPS */
-        createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
+        // createPopup()
+        // setTimeout(createPopup,1000)
+        // setTimeout(createPopup,2000)
 
-        if(almost < 120 && almost > 118){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
-        if(almost < 60 && almost > 780){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
+        // if(almost < 120 && almost > 118){
+        //   createPopup()
+        //   setTimeout(createPopup,1000)
+        //   setTimeout(createPopup,2000)
+        // }
+        // if(almost < 60 && almost > 780){
+        //   createPopup()
+        //   setTimeout(createPopup,1000)
+        //   setTimeout(createPopup,2000)
+        // }
 
 
 
@@ -94,18 +94,18 @@ this.expand = this.expand.bind(this)
       var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
         createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-
-
-      if(Math.floor(almost) < 120){
-         setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-      }else if(Math.floor(almost) < 60){
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
         setTimeout(createPopup,3000)
-      }
+        setTimeout(createPopup,8000)
+
+
+      // if(Math.floor(almost) < 120){
+      //    setTimeout(createPopup,1000)
+      //   setTimeout(createPopup,2000)
+      // }else if(Math.floor(almost) < 60){
+      //   setTimeout(createPopup,1000)
+      //   setTimeout(createPopup,2000)
+      //   setTimeout(createPopup,3000)
+      // }
 
 
 
@@ -121,7 +121,7 @@ this.expand = this.expand.bind(this)
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
-    let destruction = 1597867200;
+    let destruction = 1597975200;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 
