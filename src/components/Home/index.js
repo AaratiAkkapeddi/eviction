@@ -63,20 +63,20 @@ this.noChat = this.noChat.bind(this);
         var date = new Date(unix_timestamp * 1000);
         var today = new Date();   
         /* DECAY POPUPS */
-        createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
+        // createPopup()
+        // setTimeout(createPopup,1000)
+        // setTimeout(createPopup,2000)
 
-        if(almost < 120 && almost > 118){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
-        if(almost < 60 && almost > 780){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
+        // if(almost < 120 && almost > 118){
+        //   createPopup()
+        //   setTimeout(createPopup,1000)
+        //   setTimeout(createPopup,2000)
+        // }
+        // if(almost < 60 && almost > 780){
+        //   createPopup()
+        //   setTimeout(createPopup,1000)
+        //   setTimeout(createPopup,2000)
+        // }
 
 
 
@@ -102,17 +102,17 @@ this.noChat = this.noChat.bind(this);
 
         createPopup()
         setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
+      //   setTimeout(createPopup,2000)
 
 
-      if(Math.floor(almost) < 120){
-         setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-      }else if(Math.floor(almost) < 60){
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-        setTimeout(createPopup,3000)
-      }
+      // if(Math.floor(almost) < 120){
+      //    setTimeout(createPopup,1000)
+      //   setTimeout(createPopup,2000)
+      // }else if(Math.floor(almost) < 60){
+      //   setTimeout(createPopup,1000)
+      //   setTimeout(createPopup,2000)
+      //   setTimeout(createPopup,3000)
+      // }
 
 
 
