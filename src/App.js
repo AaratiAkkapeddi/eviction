@@ -9,7 +9,7 @@ import {
   useParams
 } from "react-router-dom";
 import './App.css';
-import {Home, Page, Navigation, Performer, PerformerIndex, About} from './components'
+import {Home, Page, Navigation, Performer, PerformerIndex, About,Livestream, Destruction} from './components'
 const NoMatchPage = () => {
   return (
     <div>
@@ -63,6 +63,12 @@ render() {
         <Route exact path="/performer-index">
 
           <PerformerIndex/>
+        </Route>
+        <Route exact path="/livestream">
+          <Livestream/>
+        </Route>
+        <Route exact path="/destruction">
+          <Destruction/>
         </Route>
         <Route exact path="/about">
 

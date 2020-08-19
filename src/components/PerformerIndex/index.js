@@ -22,6 +22,10 @@ class PerformerIndex extends Component {
    }
 
   componentDidMount() {
+      let destruction = 1597867200;
+      let unix_timestamp = destruction - 900;//when redirect happens
+      let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
+      /* DECAY POPUP GENERATOR */
     function createPopup(){
         var newNode = document.createElement('div');
         newNode.classList.add('happening-now')
@@ -41,50 +45,42 @@ class PerformerIndex extends Component {
         // Insert the new node before the reference node
         parentNode.insertBefore(newNode, parentNode.firstChild);
       }
-    let unix_timestamp = 1597802422;
-      let almost_unix_timestamp = 1597802220;
+ /* END DECAY POPUP GENERATOR */
+     /* INTERVAL */
     var meow = setInterval(function(){ 
-        let unix_timestamp = 1597802422
+        let destruction = 1597867200;
+        let unix_timestamp = destruction - 900;//when redirect happens
+        let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
         var today = new Date();   
-var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
+        var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+
+        /* DECAY POPUPS */
+        createPopup()
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
 
         if(almost < 120 && almost > 118){
           createPopup()
           setTimeout(createPopup,1000)
           setTimeout(createPopup,2000)
         }
-        if(almost < 60 && almost > 78){
+        if(almost < 60 && almost > 780){
           createPopup()
           setTimeout(createPopup,1000)
           setTimeout(createPopup,2000)
         }
-        if(almost < 30 && almost > 28){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-        }
-         if(almost < 20 && almost > 18){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-          setTimeout(createPopup,4000)
-          setTimeout(createPopup,5000)
-        }
-         if(almost < 10 && almost > 8){
-          createPopup()
-          setTimeout(createPopup,1000)
-          setTimeout(createPopup,2000)
-          setTimeout(createPopup,4000)
-          setTimeout(createPopup,5000)
-        }
+
+
+
+      /* REDIRECT */
        if(today >= date){
         clearInterval(meow)
-        window.location.href = '/'
+        window.location.href = '/livestream'
 
        }
       }, 500);
@@ -101,7 +97,11 @@ var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
     if(today > almost_date && today < date){
       var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
-      createPopup()
+        createPopup()
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
+
+
       if(Math.floor(almost) < 120){
          setTimeout(createPopup,1000)
         setTimeout(createPopup,2000)
@@ -109,26 +109,8 @@ var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
         setTimeout(createPopup,1000)
         setTimeout(createPopup,2000)
         setTimeout(createPopup,3000)
- 
-      }else if(Math.floor(almost) < 30){
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-        setTimeout(createPopup,3000)
-        setTimeout(createPopup,4000)
-        setTimeout(createPopup,5000)
-  
-        
-      }else if(Math.floor(almost) < 10){
-        createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-        setTimeout(createPopup,3000)
-        setTimeout(createPopup,4000)
-        setTimeout(createPopup,5000)
-        setTimeout(createPopup,10000)
-        setTimeout(createPopup,12000)
-       
       }
+
 
 
 

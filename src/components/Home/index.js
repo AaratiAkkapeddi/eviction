@@ -28,6 +28,10 @@ this.chat = this.chat.bind(this);
 this.noChat = this.noChat.bind(this);
    }
   componentDidMount(){
+    let destruction = 1597867200;
+    let unix_timestamp = destruction - 900;//when redirect happens
+    let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
+/* DECAY POPUP GENERATOR */
     function createPopup(){
         var newNode = document.createElement('div');
         newNode.classList.add('happening-now')
@@ -47,44 +51,38 @@ this.noChat = this.noChat.bind(this);
         // Insert the new node before the reference node
         parentNode.insertBefore(newNode, parentNode.firstChild);
       }
+       /* END DECAY POPUP GENERATOR */
+           /* INTERVAL */
      var meow = setInterval(function(){ 
-        let unix_timestamp = 1597802422;
+        let destruction = 1597867200;
+        let unix_timestamp = destruction - 900;//when redirect happens
+        let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.
         var date = new Date(unix_timestamp * 1000);
         var today = new Date();   
+        /* DECAY POPUPS */
+        createPopup()
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
+
         if(almost < 120 && almost > 118){
           createPopup()
-          setTimeout(createPopup,100)
-          setTimeout(createPopup,200)
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
         }
-        if(almost < 60 && almost > 78){
+        if(almost < 60 && almost > 780){
           createPopup()
-          setTimeout(createPopup,100)
-          setTimeout(createPopup,200)
+          setTimeout(createPopup,1000)
+          setTimeout(createPopup,2000)
         }
-        if(almost < 30 && almost > 28){
-          createPopup()
-          setTimeout(createPopup,100)
-          setTimeout(createPopup,200)
-        }
-         if(almost < 20 && almost > 18){
-          createPopup()
-          setTimeout(createPopup,100)
-          setTimeout(createPopup,200)
-          setTimeout(createPopup,400)
-          setTimeout(createPopup,500)
-        }
-         if(almost < 10 && almost > 8){
-          createPopup()
-          setTimeout(createPopup,100)
-          setTimeout(createPopup,200)
-          setTimeout(createPopup,400)
-          setTimeout(createPopup,500)
-        }
-       if(almost <= 0 && almost > -1){
-        window.location.href = '/'
+
+
+
+      /* REDIRECT */
+       if(almost <= 0 ){
+        window.location.href = '/livestream'
 
        }
 
@@ -92,8 +90,7 @@ this.noChat = this.noChat.bind(this);
 
 
 
-     let unix_timestamp = 1597802422;
-    let almost_unix_timestamp = 1597802220;
+
 
      var date = new Date(unix_timestamp * 1000);
       // Create a new JavaScript Date object based on the timestamp
@@ -103,7 +100,11 @@ this.noChat = this.noChat.bind(this);
      if(today > almost_date && today < date){
       var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
 
-      createPopup()
+        createPopup()
+        setTimeout(createPopup,1000)
+        setTimeout(createPopup,2000)
+
+
       if(Math.floor(almost) < 120){
          setTimeout(createPopup,1000)
         setTimeout(createPopup,2000)
@@ -111,26 +112,8 @@ this.noChat = this.noChat.bind(this);
         setTimeout(createPopup,1000)
         setTimeout(createPopup,2000)
         setTimeout(createPopup,3000)
- 
-      }else if(Math.floor(almost) < 30){
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-        setTimeout(createPopup,3000)
-        setTimeout(createPopup,4000)
-        setTimeout(createPopup,5000)
-  
-        
-      }else if(Math.floor(almost) < 10){
-        createPopup()
-        setTimeout(createPopup,1000)
-        setTimeout(createPopup,2000)
-        setTimeout(createPopup,3000)
-        setTimeout(createPopup,4000)
-        setTimeout(createPopup,5000)
-        setTimeout(createPopup,10000)
-        setTimeout(createPopup,12000)
-       
       }
+
 
 
 
@@ -145,7 +128,7 @@ this.noChat = this.noChat.bind(this);
     var today = new Date();   
    if(today >= date){
 
-    this.setState({dansucks: true})
+    this.setState({dansucks: false})
    }else{
     this.setState({dansucks: false})
    }
@@ -179,8 +162,11 @@ this.noChat = this.noChat.bind(this);
     }
   }
   componentDidUpdate(){
-let unix_timestamp = 1597802422;
-      let almost_unix_timestamp = 1597802220;
+
+      let destruction = 1597867200;
+      let unix_timestamp = destruction - 900;//when redirect happens
+      let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
+
     var hList = document.getElementsByTagName('h1');
     if(hList){
       for (var i = hList.length - 1; i >= 0; i--) {
@@ -197,15 +183,15 @@ let unix_timestamp = 1597802422;
                     var text = hList[i].textContent;
                   var arr = [new RegExp('a',"ig"), new RegExp('b',"ig"), new RegExp('c',"ig"), new RegExp('d',"ig"),new RegExp('e',"ig"),new RegExp('f',"ig"),new RegExp('g',"ig"),new RegExp('h',"ig"),new RegExp('i',"ig"),new RegExp('j',"ig"),new RegExp('k',"ig"),new RegExp('l',"ig"),new RegExp('m',"ig"),new RegExp('n',"ig"),new RegExp('o',"ig"),new RegExp('p',"ig"),new RegExp('q',"ig"),new RegExp('r',"ig"),new RegExp('s',"ig"),new RegExp('t',"ig"),new RegExp('u',"ig"),new RegExp('v',"ig"),new RegExp('w',"ig"),new RegExp('x',"ig"),new RegExp('y',"ig"),new RegExp('z',"ig")]
                      var newtext = text.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                         if(Math.floor(almost) < 120){
+                         if(Math.floor(almost) < 1200){
                         newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     }else if(Math.floor(almost) < 60){
+                     }else if(Math.floor(almost) < 600){
                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
 
 
-                     }else if(Math.floor(almost) < 30){
+                     }else if(Math.floor(almost) < 300){
                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
@@ -213,7 +199,7 @@ let unix_timestamp = 1597802422;
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
 
-                     }else if(Math.floor(almost) < 10){
+                     }else if(Math.floor(almost) < 100){
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
@@ -250,15 +236,15 @@ let unix_timestamp = 1597802422;
                     var text = aList[i].textContent;
                   var arr = [new RegExp('a',"ig"), new RegExp('b',"ig"), new RegExp('c',"ig"), new RegExp('d',"ig"),new RegExp('e',"ig"),new RegExp('f',"ig"),new RegExp('g',"ig"),new RegExp('h',"ig"),new RegExp('i',"ig"),new RegExp('j',"ig"),new RegExp('k',"ig"),new RegExp('l',"ig"),new RegExp('m',"ig"),new RegExp('n',"ig"),new RegExp('o',"ig"),new RegExp('p',"ig"),new RegExp('q',"ig"),new RegExp('r',"ig"),new RegExp('s',"ig"),new RegExp('t',"ig"),new RegExp('u',"ig"),new RegExp('v',"ig"),new RegExp('w',"ig"),new RegExp('x',"ig"),new RegExp('y',"ig"),new RegExp('z',"ig")]
                      var newtext = text.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                         if(Math.floor(almost) < 120){
+                         if(Math.floor(almost) < 1200){
                         newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
-                     }else if(Math.floor(almost) < 60){
+                     }else if(Math.floor(almost) < 600){
                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
 
 
-                     }else if(Math.floor(almost) < 30){
+                     }else if(Math.floor(almost) < 300){
                       newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
@@ -266,7 +252,7 @@ let unix_timestamp = 1597802422;
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
 
-                     }else if(Math.floor(almost) < 10){
+                     }else if(Math.floor(almost) < 100){
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
                        newtext = newtext.replace(arr[Math.floor(Math.random() * arr.length)], '⍰')
