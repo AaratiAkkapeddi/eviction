@@ -28,7 +28,7 @@ this.chat = this.chat.bind(this);
 this.noChat = this.noChat.bind(this);
    }
   componentDidMount(){
-    let destruction = 1597975200;
+    let destruction = 1597953600;
     let unix_timestamp = destruction - 900;//when redirect happens
     let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 /* DECAY POPUP GENERATOR */
@@ -54,7 +54,7 @@ this.noChat = this.noChat.bind(this);
        /* END DECAY POPUP GENERATOR */
            /* INTERVAL */
      var meow = setInterval(function(){ 
-        let destruction = 1597975200;
+        let destruction = 1597953600;
         let unix_timestamp = destruction - 900;//when redirect happens
         let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         var almost =  unix_timestamp - Math.floor(Date.now() / 1000)
@@ -168,7 +168,7 @@ this.noChat = this.noChat.bind(this);
   }
   componentDidUpdate(){
 
-      let destruction = 1597975200;
+      let destruction = 1597953600;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 
