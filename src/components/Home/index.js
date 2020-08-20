@@ -10,6 +10,7 @@ import {
 import ReactMarkdown from "react-markdown";
 import {Navigation} from "../"
 import Iframe from 'react-iframe'
+import { TwitchEmbed, TwitchChat, TwitchClip, TwitchPlayer } from 'react-twitch-embed';
 import ReactPlayer from "react-player";
 
 class Home extends Component {
@@ -458,14 +459,15 @@ this.noChat = this.noChat.bind(this);
 			   <h1 className=''>HAPPENING NOW</h1>
          <div>
          {happenings}
-          <div className='happening-listing happening-now-livestream off'>
-         <ReactPlayer
-      url="https://www.youtube.com/embed/_HbnJ64lu0I"
-      playing={true}
-      width="100%"
-      muted={true}
-      height="100px"
-    />
+          <div id='livestream-little' className='happening-listing happening-now-livestream off'>
+             <TwitchEmbed
+              channel="hungry"
+              id="livestream-little"
+              theme="dark"
+              muted
+              withChat={false}
+              onVideoPause={() => console.log(':(')}
+            />
         </div>
          </div>
 

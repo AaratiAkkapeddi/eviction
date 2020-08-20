@@ -10,6 +10,16 @@
 .listings{
 	margin:0 50px;
 }
+#livestream-little{
+	height:100px !important;
+	position: relative;
+}
+#livestream-little iframe{
+	    position: absolute;
+    left: 0;
+    top: 0;
+
+}
 #pop-up{
 	width:calc(100vw - 100px);
 	height:100vh;
