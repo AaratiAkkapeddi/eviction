@@ -415,15 +415,17 @@ var linkList = document.getElementsByClassName('info')[0];
                
                 </div>
               </div>
-              <div className='info brown-pro'>
+              
+            
+             
+            </div>
+
+            : "" }
+            <div className='info brown-pro'>
               <h1>{records[i].fields.Title}</h1>
               <ReactMarkdown source={records[i].fields.Info} />
               
               </div>
-            
-             
-            </div>
-            : "" }
             </div>
           )
          }
