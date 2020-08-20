@@ -1,3 +1,7 @@
 .livestream-container{
 	margin:5rem;
 }
+
+#livestream{
+	height: 80vh;
+}

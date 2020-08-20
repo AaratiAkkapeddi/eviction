@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Iframe from 'react-iframe'
 import ReactPlayer from "react-player";
+import { TwitchEmbed, TwitchChat, TwitchClip, TwitchPlayer } from 'react-twitch-embed';
+
 
 class Livestream extends Component {
   constructor(props) {
@@ -124,15 +126,17 @@ class Livestream extends Component {
 
     return (
 
-    <div className='brown-pro livestream-container'>
+    <div id='livestream' className='brown-pro livestream-container'>
       <h1> Livestream</h1>
    
-        <ReactPlayer
-		  url="https://www.youtube.com/embed/_HbnJ64lu0I"
-		  playing={true}
-		  width="100%"
-		  height="700px"
-		/>
+      
+		<TwitchEmbed
+        channel="hungry"
+        id="livestream"
+        theme="dark"
+        withChat={false}
+        onVideoPause={() => console.log(':(')}
+      />
     </div>
 
 
