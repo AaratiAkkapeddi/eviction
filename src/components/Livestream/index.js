@@ -20,7 +20,7 @@ class Livestream extends Component {
 
 
   componentDidMount(){
-	    let destruction = 1597953600;
+	    let destruction = 1597975200;
 	    let unix_timestamp = destruction - 900;//when redirect happens
 	    let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 	    /* DESTRUCTION POPUP GENERATOR */
@@ -54,7 +54,7 @@ class Livestream extends Component {
 
 
 	      var meow = setInterval(function(){ 
-	        let destruction = 1597953600;
+	        let destruction = 1597975200;
 	        let unix_timestamp = destruction - 900;//when redirect happens
 	        let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 	        var almost =  destruction - Math.floor(Date.now() / 1000)
@@ -75,7 +75,7 @@ class Livestream extends Component {
 	      }, 200);
 
 	      var meow2 = setInterval(function(){ 
-	        let destruction = 1597953600;
+	        let destruction = 1597975200;
 	        let unix_timestamp = destruction - 900;//when redirect happens
 	        let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 	        var almost =  destruction - Math.floor(Date.now() / 1000)

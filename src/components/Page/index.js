@@ -20,7 +20,7 @@ this.expand = this.expand.bind(this)
    }
 
   componentDidMount() {
-    let destruction = 1597953600;
+    let destruction = 1597975200;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
       /* DECAY POPUP GENERATOR */
@@ -46,7 +46,7 @@ this.expand = this.expand.bind(this)
        /* END DECAY POPUP GENERATOR */
     /* INTERVAL */
     var meow = setInterval(function(){ 
-        let destruction = 1597953600;
+        let destruction = 1597975200;
         let unix_timestamp = destruction - 900;//when redirect happens
         let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         // Create a new JavaScript Date object based on the timestamp
@@ -121,7 +121,7 @@ this.expand = this.expand.bind(this)
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
-    let destruction = 1597953600;
+    let destruction = 1597975200;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 
