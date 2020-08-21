@@ -461,7 +461,7 @@ this.noChat = this.noChat.bind(this);
          {happenings}
           <div id='livestream-little' className='happening-listing happening-now-livestream off'>
              <TwitchEmbed
-              channel="hungry"
+              channel="veilmachine"
               id="livestream-little"
               theme="dark"
               muted

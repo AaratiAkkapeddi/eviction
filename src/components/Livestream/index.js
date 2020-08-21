@@ -131,7 +131,7 @@ class Livestream extends Component {
    
       
 		<TwitchEmbed
-        channel="hungry"
+        channel="veilmachine"
         id="livestream"
         theme="dark"
         withChat={false}
