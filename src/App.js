@@ -31,13 +31,20 @@ class App extends React.Component {
     
   }
   componentDidMount() {
+    let mew = [];
       fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/listings?api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
         .then(res => res.json())
         .then(res => {
 
-          this.setState({ records: res.records })
+          mew =  res.records 
         })
         .catch(error => console.log(error))
+        fetch('https://api.airtable.com/v0/appJMAGbmLf1f7DeS/listings?offset=itryBJDkcGDX29lwo/reccr835Vro5xcXTQ&api_key='+process.env.REACT_APP_AIRTABLE_API_KEY)
+        .then(res => res.json())
+        .then(res => {
+          mew = mew.concat(res.records)
+          this.setState({ records: mew })
+        })
 
   }
 
