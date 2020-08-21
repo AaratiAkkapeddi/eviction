@@ -20,6 +20,10 @@
     top: 0;
 	pointer-events: none;
 }
+#livestream-little h1{
+	font-size:20px;
+	background: black;
+}
 #pop-up{
 	width:calc(100vw - 100px);
 	height:calc(100vh - 100px);

@@ -81,10 +81,10 @@ this.noChat = this.noChat.bind(this);
 
 
         if(almost_unix_timestamp - Math.floor(Date.now() / 1000) <= 0){
-          var happening = document.getElementsByClassName('happening-now-livestream')[0]
-          if(happening){
-            happening.classList.remove('off')
-          }
+          // var happening = document.getElementsByClassName('happening-now-livestream')[0]
+          // if(happening){
+          //   happening.classList.remove('off')
+          // }
         }
       /* REDIRECT */
        if(almost <= 0 ){
@@ -486,7 +486,7 @@ this.noChat = this.noChat.bind(this);
 
     return (
 
-    <header className="App-header Homepage ">
+    <header id='home' className="App-header Homepage ">
     <Navigation/>
     {dansucks ?
       <div id='over-modal'>
@@ -529,18 +529,7 @@ this.noChat = this.noChat.bind(this);
          <h1 className=''>HAPPENING NOW</h1>
          <div>
          {happenings}
-         <a href='/livestream'>
-          <div id='livestream-little' className='happening-listing happening-now-livestream off'>
-             <TwitchEmbed
-              channel="veilmachine"
-              id="livestream-little"
-              theme="dark"
-              muted
-              withChat={false}
-              onVideoPause={() => console.log(':(')}
-            />
-        </div>
-        </a>
+       
          </div>
 
          </div>
