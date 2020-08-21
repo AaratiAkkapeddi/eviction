@@ -22,17 +22,19 @@
 }
 #pop-up{
 	width:calc(100vw - 100px);
-	height:100vh;
+	height:calc(100vh - 100px);
 	top:0;
 	left:0;
+	overflow: scroll;
 	position: fixed; 
 	background: #0041F5;
 	z-index: 9999;
-	display: flex;
+/*	display: flex;*/
 	flex-direction: column;
 	justify-content: center;
-	padding:0 50px;
+	padding:50px 50px;
 }
+
 .happening-now-livestream.off{
 	display: none;
 }
@@ -58,6 +60,10 @@ margin-right:5px;
 	border-radius: 18px;
 	    display: inline-block;
     margin: 0 auto;
+    margin-left:50%;
+    margin-top:50px;
+    cursor:pointer;
+    margin-bottom:100px;
 }
 .chat-room{
 

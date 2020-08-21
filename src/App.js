@@ -14,7 +14,7 @@ const NoMatchPage = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <h3 className='oops-message text-large'>404 Woops! This page does not exist. Maybe try going <a className='link' href='/'>Home</a>?</h3>
+      <h3 className='oops-message text-large'>404: uh oh! You are searching for substance in a place where there's ultimately nothing at all. Use the empty space below to project your fantasies, or click here to return to the party. <a className='link' href='/'>Return</a>?</h3>
     </div>
   );
 };
