@@ -438,9 +438,10 @@ this.noChat = this.noChat.bind(this);
 		}
 	}
 	})
+  const newNHN =   notHappeningNow.sort((a, b) => (a.fields.StartTime > b.fields.StartTime) ? 1 : -1)
 
 
-	const listings = notHappeningNow.length > 0 ? notHappeningNow.map((x,i)=>{
+	const listings = newNHN.length > 0 ? newNHN.map((x,i)=>{
 
         var date = new Date(x.fields.StartTime);
 
