@@ -20,11 +20,11 @@ this.expand = this.expand.bind(this)
    }
 
   componentDidMount() {
-    let destruction = 1597975200;
+    let destruction = 1598068799;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
-      /* DECAY POPUP GENERATOR */
-    function createPopup(){
+     /* DECAY POPUP GENERATOR */
+      function createPopup(){
         var newNode = document.createElement('div');
         newNode.classList.add('happening-now')
         newNode.classList.add('urgent')
@@ -33,9 +33,9 @@ this.expand = this.expand.bind(this)
         newNode.style.marginTop = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
         newNode.style.marginBottom = Math.floor(Math.random() * (50 - (-50)) + -50) + 'px';
         var innerNode = document.createElement('div');
-        var textOptions = ["<h4>CRITICAL ERROR #S3X W00RK</h4><br>Your experience goes against our community guidelines. We’ve erased your experience because it goes against our Community Guidelines on nudity or sexual activity. Our Guidelines are based on our traditional upbringing and our board of directors may be too sensitive to see an illustration of an ass.", "<h4>YOUR ACCOUNT HAS BEEN RESTRICTED</h4><br>Thank you for contacting us. I reviewed your account and can see that it is currently restricted to withdrawing funds from your Cash Balance", "<h4>PROHIBITED USE</h4><br>Our Compliance Team identified your account as having sent or received gifts associated with a prohibited use case. We encourage you to find another payments provider as we cannot process future transactions for you. Going forward, any gifts sent to or from your email address will be automatically canceled.<br>Thank you for your understanding.",'<h4>'+Math.floor(almost) + ' seconds until this platform fully self destructs</h4>']
+        var textOptions = ['<h4>!!! WARNING !!!</h4><br>you\'re almost there, just a little bit further<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">keep going</button>', '<h4>WHAT\'S WRONG, SWEETIE?</h4><br>you\'re not giving up now, are you?<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">keep looking</button>', '<h4>UPDATE</h4><br>there\'s more to be found if you know where to look<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">keep looking</button>', '<h4>ALMOST THERE</h4><br>so close you can almost taste it.<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">ok</button>', '<h4>SATISFACTION THIS WAY</h4><br>you want to feel good, don\'t<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">let me cum</button>', '<h4>Unveil the Veil</h4><br> The reveal is in the hiding. The hiding works to reveal. <br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">unveil us</button>', '<h4>Keep Looking</h4><br>we\'ll make it worth your while, darling<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">find it</button>', '<h4>U WANT A$$</h4><br>"A$$ / B00BIES / CH@0S if you know where to look"<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">look for us</button>', '<h4>s0 cl0s3</h4><br>you haven\'t gotten what you came here for, sweetie.<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">get it before it\'s gone</button>', '<h4>cum on be a good boy</h4><br>be a good boy and sniff us out<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">sniff sniff</button>']
         var text = textOptions[Math.floor(Math.random() * textOptions.length)];
-        innerNode.innerHTML = "<div class='top-bar'><button onclick='this.parentNode.parentNode.parentNode.remove()'>✕</button></div><div class='inner-popup'>"+text+'<br><button onclick="this.parentNode.parentNode.parentNode.remove()" class="ok">ok</button></div>';
+        innerNode.innerHTML = "<div class='top-bar'><button onclick='this.parentNode.parentNode.parentNode.remove()'>✕</button></div><div class='inner-popup'>"+text+'</div>';
         newNode.appendChild(innerNode);
         // Get the parent node
         var parentNode = document.querySelector('body');
@@ -43,10 +43,10 @@ this.expand = this.expand.bind(this)
         // Insert the new node before the reference node
         parentNode.insertBefore(newNode, parentNode.firstChild);
       }
-       /* END DECAY POPUP GENERATOR */
+    /* END DECAY POPUP GENERATOR */
     /* INTERVAL */
     var meow = setInterval(function(){ 
-        let destruction = 1597975200;
+        let destruction = 1598068799;
         let unix_timestamp = destruction - 900;//when redirect happens
         let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
         // Create a new JavaScript Date object based on the timestamp
@@ -97,7 +97,7 @@ this.expand = this.expand.bind(this)
         // setTimeout(createPopup,3000)
         // setTimeout(createPopup,8000)
  var meow2 = setInterval(function(){ 
-          let destruction = 1597975200;
+          let destruction = 1598068799;
           let unix_timestamp = destruction - 900;//when redirect happens
           let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
           var almost =  destruction - Math.floor(Date.now() / 1000)
@@ -111,10 +111,10 @@ this.expand = this.expand.bind(this)
   
 
         /* REDIRECT */
-         if(almost <= 0 ){
-          clearInterval(meow2);
+         // if(almost <= 0 ){
+         //  clearInterval(meow2);
 
-         }
+         // }
 
           if(almost < 900 ){
             createPopup()
@@ -191,7 +191,7 @@ this.expand = this.expand.bind(this)
       .catch(error => console.log(error))
   }
   componentDidUpdate(){
-    let destruction = 1597975200;
+    let destruction = 1598068799;
       let unix_timestamp = destruction - 900;//when redirect happens
       let almost_unix_timestamp = unix_timestamp - 900;//when decay starts to happens
 

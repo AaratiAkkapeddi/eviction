@@ -18,7 +18,7 @@
 	    position: absolute;
     left: 0;
     top: 0;
-
+	pointer-events: none;
 }
 #pop-up{
 	width:calc(100vw - 100px);
