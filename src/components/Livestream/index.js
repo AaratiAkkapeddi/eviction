@@ -87,7 +87,7 @@ class Livestream extends Component {
 	        var today = new Date();   
 	    
     /* DECAY POPUPS */
-	        createPopup()
+
 	
 
 	      /* REDIRECT */
@@ -96,26 +96,57 @@ class Livestream extends Component {
 
 	       }
 
-	        if(almost < 120 ){
+	        if(almost < 900 ){
 	          createPopup()
-	          setTimeout(createPopup,1000)
-	          setTimeout(createPopup,2000)
-	        }
-	        if(almost < 60 ){
+	          setTimeout(createPopup,15000)
+	          setTimeout(createPopup,15000 * 2)
+	          setTimeout(createPopup,15000 * 3)
+	          setTimeout(createPopup,15000 * 4)
+	          setTimeout(createPopup,15000 * 5)
+	          setTimeout(createPopup,15000 * 6)
+	          setTimeout(createPopup,15000 * 7)
+	          setTimeout(createPopup,15000 * 8)
+	          setTimeout(createPopup,15000 * 9)
+	          setTimeout(createPopup,15000 * 10)
+	          setTimeout(createPopup,15000 * 11)
+	          setTimeout(createPopup,15000 * 12)
+	          setTimeout(createPopup,15000 * 13)
+	          setTimeout(createPopup,15000 * 14)
+	          setTimeout(createPopup,15000 * 15)
+	          setTimeout(createPopup,15000 * 16)
+	          setTimeout(createPopup,15000 * 17)
+	          setTimeout(createPopup,15000 * 18)
+	          setTimeout(createPopup,15000 * 19)
+	          setTimeout(createPopup,15000 * 20)
+
+	        }else if(almost < 300 ){
 	          createPopup()
-	          setTimeout(createPopup,1000)
-	          setTimeout(createPopup,2000)
-	          setTimeout(createPopup,1000)
-	          setTimeout(createPopup,2000)
-	          setTimeout(createPopup,1000)
-	          setTimeout(createPopup,2000)
-	          setTimeout(createPopup,1000)
-	          setTimeout(createPopup,2000)
-	          setTimeout(createPopup,1000)
-	          setTimeout(createPopup,2000)
+	          setTimeout(createPopup,3000)
+	          setTimeout(createPopup,3000 * 2)
+	          setTimeout(createPopup,3000 * 3)
+	          setTimeout(createPopup,3000 * 4)
+	          setTimeout(createPopup,3000 * 5)
+	          setTimeout(createPopup,3000 * 6)
+	          setTimeout(createPopup,3000 * 7)
+	          setTimeout(createPopup,3000 * 8)
+	          setTimeout(createPopup,3000 * 9)
+	          setTimeout(createPopup,3000 * 10)
+	          setTimeout(createPopup,3000 * 11)
+	          setTimeout(createPopup,3000 * 12)
+	          setTimeout(createPopup,3000 * 13)
+	          setTimeout(createPopup,3000 * 14)
+	          setTimeout(createPopup,3000 * 15)
+	          setTimeout(createPopup,3000 * 16)
+	          setTimeout(createPopup,3000 * 17)
+	          setTimeout(createPopup,3000 * 18)
+	          setTimeout(createPopup,3000 * 19)
+	          setTimeout(createPopup,3000 * 20)
+	        }else{
+	          createPopup()
 	        }
 
-	      }, 3000);
+
+	      }, 60000);
 
 
 	}
