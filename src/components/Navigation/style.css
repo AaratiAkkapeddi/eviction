@@ -19,6 +19,7 @@ nav .logo{
 }
 .logo svg{
 	width: 175px;
+	fill:white;
 }
 
 nav a {
