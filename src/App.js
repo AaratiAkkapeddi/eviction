@@ -59,7 +59,7 @@ render() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Home info={info} records={records}/>
+          <Destruction/>
         </Route>
          <Route exact path="/page/:id">
          
@@ -81,7 +81,7 @@ render() {
         </Route>
         <Route exact path="/about">
 
-          <About/>
+       <Destruction/>
         </Route>
         <Route component={NoMatchPage} />
       </Switch>
