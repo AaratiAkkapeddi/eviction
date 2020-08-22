@@ -1,5 +1,8 @@
 .livestream-container{
-	margin:5rem;
+	margin:0 5rem;
+}
+.livestream-title{
+	margin:1rem 5rem 0;
 }
 
 #livestream{

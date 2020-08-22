@@ -165,7 +165,8 @@ class Livestream extends Component {
 
 
     return (
-
+      <div>
+<h1 className='livestream-title'>CLOSING PARTY a taboo is the fetishization of a limit FETISHIZE CENSORSHIP AND CUM WITH US</h1>
     <div id='livestream' className='brown-pro livestream-container'>
       <h1> Livestream</h1>
    
@@ -178,7 +179,7 @@ class Livestream extends Component {
         onVideoPause={() => console.log(':(')}
       />
     </div>
-
+</div>
 
 
 
