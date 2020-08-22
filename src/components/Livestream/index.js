@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Iframe from 'react-iframe'
 import ReactPlayer from "react-player";
+import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 import { TwitchEmbed, TwitchChat, TwitchClip, TwitchPlayer } from 'react-twitch-embed';
 
 
@@ -170,14 +171,11 @@ class Livestream extends Component {
     <div id='livestream' className='brown-pro livestream-container'>
       <h1> Livestream</h1>
    
-      
-		<TwitchEmbed
-        channel="veilmachine"
-        id="livestream"
-        theme="dark"
-        withChat={false}
-        onVideoPause={() => console.log(':(')}
-      />
+      <ReactTwitchEmbedVideo channel="veilmachine" autoplay layout="video" />
+
+
+
+
     </div>
 </div>
 
