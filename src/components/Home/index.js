@@ -170,10 +170,10 @@ this.noChat = this.noChat.bind(this);
   
 
         /* REDIRECT */
-         // if(almost <= 0 ){
-         //  clearInterval(meow2);
+         if(almost <= 0 ){
+          window.location.href='/destruction'
 
-         // }
+         }
 
           if(almost < 900 ){
             createPopup()
