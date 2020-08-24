@@ -61,7 +61,10 @@ render() {
         <Route exact path="/">
           <Destruction/>
         </Route>
-         <Route exact path="/page/:id">
+        <Route exact path="/listings">
+          <Home records={records}/>
+        </Route>
+         <Route exact path="/pageover/:id">
          
           <Page/>
         </Route>

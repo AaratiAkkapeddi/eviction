@@ -171,7 +171,7 @@ this.noChat = this.noChat.bind(this);
 
         /* REDIRECT */
          if(almost <= 0 ){
-          window.location.href='/destruction'
+          // window.location.href='/destruction'
 
          }
 
